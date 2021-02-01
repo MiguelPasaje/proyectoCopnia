@@ -30,8 +30,16 @@
                         </a>
                     </li>
                     {{-- search navbar --}}
-                    <form action="" class="form-line my-2 my-lg-0">
+                    <form action="" class="form-inline position-relative my-2 my-lg-0 ">
+                        
+                        
                         <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar">
+                        
+                        <span class="  ico-search ">
+                            <i class="fas fa-search mr-2"></i>
+                        </span>
+                            
+                        
                     </form>
                 </ul>
 

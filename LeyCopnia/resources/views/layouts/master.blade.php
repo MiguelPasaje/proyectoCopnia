@@ -16,11 +16,24 @@
     {{--tailwind CSS --}}
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
+    {{-- MY css --}}
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+    {{-- fonts.google --}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    {{-- ********** --}}
+
     <title>@yield('title')</title>
   </head>
   <body>
 
     @include('partials.navbar')
+
+    <div>
+      @include('partials.sideMenu')
+    </div>
 
     <div class="mx-auto" style="width: 80%; margin-top: 5%">
         @yield('content')
