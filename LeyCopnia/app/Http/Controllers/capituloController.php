@@ -11,17 +11,16 @@ class capituloController extends Controller
         return view('capitulos.capIndex');
 
     }
+    public function getCreate(){
+
+        return view('capitulos.capCreate');
+    }
     public function getShow($id){
 
         return view();
 
     }
-    public function getCreate(){
-
-        return view();
-
-
-    }
+    
 
     public function getEdit($id){
 
