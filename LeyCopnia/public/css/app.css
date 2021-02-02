@@ -14,7 +14,11 @@ body{
 
 /* para modificar la clase de bootstrap */
 .bg-primary{
+    /* 
     background-color: var(--primary) !important;
+
+     */
+     background-color: black !important;
 }
 /**/
 
@@ -53,6 +57,7 @@ a:hover{
     overflow:hidden;
 }
 
+
 .menuSide:hover{
     width: 300px;
 }
@@ -67,3 +72,21 @@ a:hover{
     
 }
 
+i{
+    color: rgba(255, 255, 255, 0.5);
+    transition:2s;
+    cursor: default;
+    user-select: none;
+    padding:0 5px;
+    
+}
+
+i:hover{
+    transition:0s;
+    color: #0f0;
+    text-shadow: 0 0 200px #0f0;
+}
+
+i .exclamation{
+    
+}

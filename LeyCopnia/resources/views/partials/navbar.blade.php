@@ -26,7 +26,7 @@
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/catalog/create')}}">
-                            <i class="fas fa-envelope"></i> About
+                            <i class=" exclamation fas fa-exclamation"></i> About                            
                         </a>
                     </li>
                     {{-- search navbar --}}

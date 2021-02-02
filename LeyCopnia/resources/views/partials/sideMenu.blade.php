@@ -6,17 +6,14 @@
         </div>
         {{-- <i class="far fa-plus-square"></i> signo mas --}}
         <div class="menu">
-            <a href="#" class=" iconSM d-block p-3 text-light mr-2 lead">
-                <i class="fas fa-dot-circle"></i>
-                &nbsp;&nbsp;&nbsp;aa
-                </a>
+           
             <a href="#" class=" iconSM d-block p-3 text-light mr-3 lead">
                 <i class="fas fa-dot-circle"></i>
-                &nbsp;&nbsp;&nbsp;bb
+                &nbsp;&nbsp;&nbsp;Capitulos
             </a>
             <a href="#" class=" iconSM d-block p-3 text-light mr-2 lead">
                 <i class="fas fa-dot-circle"></i>
-                &nbsp;&nbsp;&nbsp;cc
+                &nbsp;&nbsp;&nbsp;Articulos
             </a>
 
             <a href="#" class=" iconSM d-block p-3 text-light mr-3 lead">
