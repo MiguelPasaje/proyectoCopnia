@@ -22,12 +22,12 @@
 <div id="cont-cap-create" class="">
     <form action="" >
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label h3">{{----}}</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="ID">
+            <label for="exampleFormControlInput1" class="form-label h3">Id Capítulo</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" value="" placeholder="ID">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label h3">{{----}}</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+            <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del capítulo</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" value="" placeholder="Nombre">
             
         </div>
         <select class=" form-select " aria-label="Default select example">
