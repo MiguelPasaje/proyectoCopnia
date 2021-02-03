@@ -36,8 +36,10 @@
             <option value="2">Two</option>
             <option value="3">Three</option>
         </select>
-        <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
-            <button type="button" class="btn btn-primary btn-lg p-2 mt-5">Guardar</button>
+        
+        <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
+            <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-lg  mt-5">Guardar</button>
         </div>
         
     </form>
