@@ -18,7 +18,7 @@
 
     </style>
 
-    <h1 class=" h1" id="title-Cap"> Crear Capitulo</h1>
+    <h1 class=" h1" id="title-Cap"> Crear Capítulo</h1>
 
     <div id="cont-cap-create" class="">
         <form action="" >
@@ -27,7 +27,7 @@
                 <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="ID">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del capitulo</label>
+                <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del capítulo</label>
                 <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
                 
             </div>

@@ -22,10 +22,9 @@ class capituloController extends Controller
     }
     
 
-    public function getEdit($id){
+    public function getEdit($id_cap){
 
-        return view();
-
+        return view('capitulos.capEdit');
 
     }
     
