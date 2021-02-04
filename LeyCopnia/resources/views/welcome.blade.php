@@ -4,6 +4,6 @@
 
 @section('content')
 
-
+@include('partials.sideMenu')
 
 @stop

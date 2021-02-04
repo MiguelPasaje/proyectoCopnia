@@ -15,7 +15,10 @@ use App\Http\Controllers\capituloController;
 |
 */
 
+
 Route::get('/', HomeController::class);
+
+Route::get('/leyConsulta', [HomeController::class,'getLey'])->name('homLey');
 
 Route::get('/leyIndex', [capituloController::class, 'getIndex' ])->name('capIndex');
 
