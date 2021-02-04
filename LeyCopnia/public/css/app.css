@@ -5,15 +5,20 @@
 }
 
 body{
-
-    overflow: show;
     /* overflow: hidden; */
+    overflow: show;
     font-family: arial;
     font-weight: 300;
     color: var(--primary);
 
 }
 
+/**/
+.content-cap{
+    width:70%;
+    margin-left:15%;
+}
+/**/
 /* para modificar la clase de bootstrap */
 .bg-primary{
     /* 

@@ -20,7 +20,7 @@
     </style>
 
     <h1 class=" h1" id="title-Cap"> Crear Capítulo</h1>
-
+<div class="content-cap">
     <div id="cont-cap-create" class="">
         <form action="" >
             <div class="mb-3">
@@ -53,6 +53,7 @@
             
         </form>
     </div>
+</div>
 
 
 
