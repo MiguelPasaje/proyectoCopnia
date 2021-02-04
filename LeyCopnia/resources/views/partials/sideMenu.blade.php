@@ -2,7 +2,7 @@
     
     <div class=" bg-primary" id="sidebar-content">
         <div class="logo">
-            <h4 class="text-light font-weight-bold  ">COPNIA</h4>
+            <h4 class="text-light font-weight-bold  ">MENU</h4>
         </div>
         {{-- <i class="far fa-plus-square"></i> signo mas --}}
         <div class="menu">

@@ -5,7 +5,7 @@
 }
 
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: arial;
     font-weight: 300;
     color: var(--primary);
@@ -38,6 +38,7 @@ a:hover{
 
 #sidebar-content .menu{
     width:18rem;
+    
 }
 
 /*posisicion del icono search*/
