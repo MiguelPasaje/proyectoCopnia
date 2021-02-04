@@ -45,6 +45,9 @@ a:hover{
     position: absolute;
     top: 12px;
     right:15px;
+    background-color:rgb(255, 255, 255);
+    color: rgb(59, 59, 59);
+    font-size: 20px;
 }
 
 /*--*/
@@ -78,15 +81,23 @@ i{
     cursor: default;
     user-select: none;
     padding:0 5px;
-    
+        
 }
 
-i:hover{
-    transition:0s;
-    color: #0f0;
-    text-shadow: 0 0 200px #0f0;
+i.lateral:hover{
+    transition:0.5s;
+    color: #ff0;
+    text-shadow: 0 0 200px #ff0;
+    font-size: 25px;
 }
 
-i .exclamation{
-    
+/*-----nav-----*/
+.exclamation{
+    transform: rotate(-180deg);
 }
+
+ li .navhov:hover { 
+    color:#ff0 !important;
+}
+/*---------------------*/
+

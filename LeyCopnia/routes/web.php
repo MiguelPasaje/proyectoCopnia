@@ -26,7 +26,7 @@ Route::get('/leyIndex', [capituloController::class, 'getIndex' ])->name('capInde
 
 Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
 
-Route::get('/leyCapEdit', [capituloController::class, 'getEdit' ])->name('capEdit');
+Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
 
 Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
 

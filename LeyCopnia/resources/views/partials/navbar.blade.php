@@ -14,19 +14,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog')}}">
+                        <a class="navhov nav-link" href="{{url('/catalog')}}">
                             <i class="fas fa-home"></i>
                             Home
                         </a>
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog/create')}}">
+                        <a class="navhov nav-link" href="{{url('/catalog/create')}}">
                             <i class="fas fa-envelope"></i> Contacto
                         </a>
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog/create')}}">
-                            <i class=" exclamation fas fa-exclamation"></i> About                            
+                        <a class="navhov nav-link" href="{{url('/catalog/create')}}">
+                            <i class="exclamation exclamation fas fa-exclamation"></i> About                            
                         </a>
                     </li>
                     {{-- search navbar --}}
