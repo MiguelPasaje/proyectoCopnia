@@ -2,8 +2,10 @@
 
 @section('title','HOME')
 
+@include('partials.sideMenu')
+
 @section('content')
 
-@include('partials.sideMenu')
+
 
 @stop
