@@ -2,6 +2,8 @@
 
 @section('title','capituloCREATE')
 
+@include('partials.sideMenu')
+
 @section('content')
 
     <style>
@@ -13,7 +15,6 @@
         #title-Cap{
             text-align: center;
         }
-
 
 
     </style>

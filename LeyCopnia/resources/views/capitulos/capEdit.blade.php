@@ -2,6 +2,8 @@
 
 @section('title','EDIT')
 
+@include('partials.sideMenu')
+
 @section('content')
 <style>
     #cont-cap-create{
