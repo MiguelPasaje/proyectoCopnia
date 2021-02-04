@@ -6,6 +6,7 @@
 
 body{
     /* overflow: hidden; */
+    overflow: show;
     font-family: arial;
     font-weight: 300;
     color: var(--primary);
