@@ -31,6 +31,7 @@ class HomeController extends Controller
     );
 
     public function __invoke(){
+
         return view('Indice',['arrayLeyes'=>$this->arrayLeyes]);
     }
 
@@ -39,4 +40,5 @@ class HomeController extends Controller
         return view('welcome',array('id'=>$id));
 
     }
+    
 }

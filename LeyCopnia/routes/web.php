@@ -20,9 +20,6 @@ Route::get('/', HomeController::class);
 
 Route::get('/leyConsulta{id}', [HomeController::class,'getLey'])->name('homLey');
 
-//Route::get('/leyIndex', [capituloController::class, 'getIndex' ])->name('capIndex');
-
-//Route::get('ley', [capituloController::class, 'getShow' ])->name();
 
 Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
 
