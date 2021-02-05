@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="/catalog" style="color:rgb(255, 238, 0)">
-            <span style="font-size:15pt">&#1503;</span>
-             COPNIA
-            
+        <a class="navbar-brand" href="/" style="color:rgb(255, 238, 0)">
+            <img src="imagenes/libro.png"  width="50" height="50" alt="libro"> 
+                INICIO 
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
