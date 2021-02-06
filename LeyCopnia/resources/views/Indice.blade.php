@@ -101,16 +101,16 @@
                 <div class="card my-2 border border-success" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-5 my-2">
-                            <a href="{{url('/leyConsulta').$key}}">
-                            <img src="{{$ley['imagen']}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
+                            <a href="{{url('/ley/titulos/'. $ley->id)}}">
+                            <img src="{{$ley->imagen}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
                             </a>
                             
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">{{$ley['titulo']}}</h5>
-                                <p class="card-text pb-2">{{$ley['desc']}}</p>
-                                <a href="{{url('/leyConsulta').$key}}" class="btn btn-primary mx-3">Consultar</a>
+                                <h5 class="card-title">{{$ley->nombre}}</h5>
+                                <p class="card-text pb-2">{{$ley->descripcion}}</p>
+                                <a href="{{url('/ley/titulos/'. $ley->id)}}" class="btn btn-primary mx-3">Consultar</a>
                             </div>
                         </div>
                     </div>

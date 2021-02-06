@@ -19,7 +19,7 @@ use App\Http\Controllers\tituloController;
 
 Route::get('/', HomeController::class);
 
-Route::get('/leyConsulta{id}', [tituloController::class,'getLey'])->name('homLey');
+Route::get('/ley/titulos/{id}', [tituloController::class,'getLey'])->name('homLey');
 Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
 
 
