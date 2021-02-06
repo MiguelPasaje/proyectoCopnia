@@ -6,6 +6,8 @@
 
 @section('content')
 
-  Donde se muestra los titulos
+  <div class="container">
+    Donde se muestra los titulos
+  </div>
 
 @stop

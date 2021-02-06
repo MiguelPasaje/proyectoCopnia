@@ -12,19 +12,19 @@
         @if( /* Auth::check() */ true || Auth::check()  )
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
-                        <a class="navhov nav-link" href="{{url('/catalog')}}">
+                    <li class="nav-item{{--  {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}} --}}">
+                        <a class="navhov nav-link" href="{{url('/')}}">
                             <i class="fas fa-home"></i>
                             Home
                         </a>
                     </li>
-                    <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="navhov nav-link" href="{{url('/catalog/create')}}">
+                    <li class="nav-item {{-- {{  Request::is('/catalog') ? 'active' : ''}} --}}">
+                        <a class="navhov nav-link" href="{{url('/contacto')}}">
                             <i class="fas fa-envelope"></i> Contacto
                         </a>
                     </li>
-                    <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="navhov nav-link" href="{{url('/catalog/create')}}">
+                    <li class="nav-item {{-- {{  Request::is('catalog/create') ? 'active' : ''}} --}}">
+                        <a class="navhov nav-link" href="{{url('/about')}}">
                             <i class="exclamation exclamation fas fa-exclamation"></i> About                            
                         </a>
                     </li>
