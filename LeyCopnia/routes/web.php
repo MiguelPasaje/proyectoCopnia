@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\capituloController;
+use App\Http\Controllers\tituloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,13 @@ use App\Http\Controllers\capituloController;
 
 Route::get('/', HomeController::class);
 
-Route::get('/leyConsulta{id}', [HomeController::class,'getLey'])->name('homLey');
+Route::get('/leyConsulta{id}', [tituloController::class,'getLey'])->name('homLey');
+Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
+
+
 
 
 Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
-
 Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
-
 Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
-
 Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');

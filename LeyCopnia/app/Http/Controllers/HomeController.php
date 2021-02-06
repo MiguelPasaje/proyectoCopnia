@@ -34,11 +34,4 @@ class HomeController extends Controller
 
         return view('Indice',['arrayLeyes'=>$this->arrayLeyes]);
     }
-
-    public function getLey($id) {
-
-        return view('welcome',array('id'=>$id));
-
-    }
-    
 }
