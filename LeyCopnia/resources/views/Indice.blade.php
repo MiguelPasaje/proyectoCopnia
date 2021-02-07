@@ -2,8 +2,6 @@
 
 @section('title','Listado Leyes')
 
-
-@section('content')
 <style>
 
     /* Slideshow container */
@@ -45,6 +43,9 @@
 
 
 </style>
+
+@section('content')
+
 
 <div class="content">
     <div class="row">
