@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
-@section('title','HOME')
+@section('title','TITULOS')
 
-@include('partials.sideMenu')
+
 
 @section('content')
-
+@include('partials.sideMenu')
   <div class="container">
     Donde se muestra los titulos
   </div>
