@@ -18,6 +18,8 @@
 
     {{-- MY css --}}
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/estilos.css')}}">
+
 
     {{-- fonts.google --}}
     <link rel="preconnect" href="https://fonts.gstatic.com">

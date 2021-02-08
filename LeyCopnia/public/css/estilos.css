@@ -1,0 +1,117 @@
+:root{
+    --primary: rgb(104, 104, 104);
+    --light: rgb(255, 255, 255);
+    --grey: rgb(109, 109, 109);
+}
+
+body{
+    /* overflow: hidden; */
+    overflow: show;
+    font-family: arial;
+    font-weight: 300;
+    color: var(--primary);
+
+}
+
+/**/
+.content-cap{
+    width:70%;
+    margin-left:15%;
+}
+/**/
+/* para modificar la clase de bootstrap */
+.bg-primary{
+    /* 
+    background-color: var(--primary) !important;
+
+     */
+     background-color: black !important;
+}
+/**/
+
+a:hover{
+    text-decoration:none;
+}
+
+#sidebar-content{
+    min-height:100vh;
+
+}
+
+#sidebar-content .logo{
+    padding: .85rem 1.25rem;
+
+}
+
+#sidebar-content .menu{
+    width:18rem;
+    
+}
+
+/*posisicion del icono search*/
+.ico-search i{
+    position: absolute;
+    top: 12px;
+    right:15px;
+    background-color:rgb(255, 255, 255);
+    color: rgb(59, 59, 59);
+    font-size: 20px;
+}
+
+/*--*/
+
+.menuSide{
+    position: fixed;
+    width: 60px;
+    height:100%;
+    transition:0.5s;
+    overflow:hidden;
+}
+
+
+
+.menuSide:hover
+.logo{
+    
+    text-align:center
+       
+}
+
+.menuSide:hover{
+    width: 300px;
+}
+
+.menu .iconSM{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 10px;
+    
+}
+
+i{
+    color: rgba(255, 255, 255, 0.5);
+    transition:2s;
+    cursor: default;
+    user-select: none;
+    padding:0 5px;
+        
+}
+
+i.lateral:hover{
+    transition:0.5s;
+    color: #ff0;
+    text-shadow: 0 0 200px #ff0;
+    font-size: 25px;
+}
+
+/*-----nav-----*/
+.exclamation{
+    transform: rotate(-180deg);
+}
+
+ li .navhov:hover { 
+    color:#ff0 !important;
+}

@@ -53,6 +53,16 @@
                             </div>
                         </div>
 
+                        <div>
+                            {{-- rol --}}
+                            asdfsadfsadf
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="rol"  class="form-control " required autocomplete="current-password" name="rol">
+                        </div>
+
+
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
