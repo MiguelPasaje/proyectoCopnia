@@ -7,6 +7,8 @@ use App\Http\Controllers\CatalogController;
 
 class HomeController extends Controller
 {
+
+    
     /**
      * Create a new controller instance.
      *

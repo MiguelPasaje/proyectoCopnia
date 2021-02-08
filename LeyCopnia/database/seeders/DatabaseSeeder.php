@@ -6,10 +6,37 @@ use Illuminate\Database\Seeder;
 
 use DB;
 use App\Models\User;
+use App\Models\leyes;
+
 
 
 class DatabaseSeeder extends Seeder
 {
+    private $arrayLeyes=array(
+        array(
+            'titulo' => '842 de 2003',
+            'imagen' => 'imagenes/842_2003.png',
+			'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
+		),
+		array(
+            'titulo' => '843 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+			'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
+		),
+		array(
+            'titulo' => '844 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+			'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
+		),
+		array(
+            'titulo' => '845 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+			'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
+		)
+    );
+
+
+
     /**
      * Seed the application's database.
      *
@@ -48,13 +75,10 @@ class DatabaseSeeder extends Seeder
     private function seedLeyes(){
         DB::table('leyes')->delete();
         foreach( $this->arrayLeyes as $leyes ) {
-            $p = new Movie;
-            $p->nombre = $nombre['nombre'];
-            $p->imagen = $imagen['imagen'];
-            $p->descripcion = $descripcion['director'];
-            $p->poster = $pelicula['poster'];
-            $p->rented = $pelicula['rented'];
-            $p->synopsis = $pelicula['synopsis']; 
+            $p = new leyes;
+            $p->nombre = $leyes['titulo'];
+            $p->imagen = $leyes['imagen'];
+            $p->descripcion = $leyes['desc'];
             $p->save();
       }
 
