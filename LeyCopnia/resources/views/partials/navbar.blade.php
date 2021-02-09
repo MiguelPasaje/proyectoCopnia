@@ -43,8 +43,8 @@
   --}}
 <nav class="navbar navbar-expand-lg navbar-dark  bg-dark" style="padding:31px; font-size:18px">
     <div class="container">
-        <a class="navbar-brand" href="/" style="color:rgb(255, 255, 255)">
-            <img src="{{asset('imagenes/libro.png')}} "  width="50" height="50" alt="libro" style="position: fixed; margin-left:-60px; margin-top:-5px;">
+        <a class="navbar-brand" href="/" style="color:rgb(255, 255, 255); margin-left:60px;">
+            <img src="{{asset('imagenes/libro.png')}} "  width="50" height="50" alt="libro" style="position: absolute; margin-left:-60px; margin-top:-5px;">
             <!--span style="font-size:15pt">&#9821;</span-->
             MigFel.org
         </a>
