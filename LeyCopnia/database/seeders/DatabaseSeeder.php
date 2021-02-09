@@ -91,11 +91,11 @@ class DatabaseSeeder extends Seeder
     {
      
 
-        //self::seedUser();
-        //$this->command->info('Tabla usuarios inicializada con datos!');
+        self::seedUser();
+        $this->command->info('Tabla usuarios inicializada con datos!');
 
-        self::seedLeyes();
-        $this->command->info('Tabla leyes inicializada con datos!');
+        //self::seedLeyes();
+        //$this->command->info('Tabla leyes inicializada con datos!');
 
         // self::seedTitulos();
         //$this->command->info('Tabla titulos inicializada con datos!');
