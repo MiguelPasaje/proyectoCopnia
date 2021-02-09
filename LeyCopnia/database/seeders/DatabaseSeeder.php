@@ -7,66 +7,71 @@ use Illuminate\Database\Seeder;
 use DB;
 use App\Models\User;
 use App\Models\leyes;
-
+use App\Models\titulo;
 
 
 class DatabaseSeeder extends Seeder
 {
-    /* private $arrayLeyes=array(
+    
+    private $arrayLeyes=array(
          array(
-             'titulo' => '842 de 2003',
-             'imagen' => 'imagenes/842_2003.png',
+            'idley' => '100',
+            'ley' => '842 de 2003',
+            'imagen' => 'imagenes/842_2003.png',
 	 		'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
 	 	),
 	 	array(
-             'titulo' => '843 de 2003',
-             'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+            'idley' => '101',
+            'ley' => '843 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
 	 		'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
 	 	),
 	 	array(
-             'titulo' => '844 de 2003',
-             'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+            'idley' => '102',
+            'ley' => '844 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
 	 		'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
 	 	),
 	 	array(
-             'titulo' => '845 de 2003',
-             'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
+            'idley' => '103',
+            'ley' => '845 de 2003',
+            'imagen' => 'https://dialogocim.files.wordpress.com/2015/06/ley.jpg?w=584',
 	 		'desc' => 'Por la cual se modifica la reglamentación del ejercicio de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, se adopta el Código de Ética Profesional y se dictan otras disposiciones.'
 	 	)
-     );*/
+     );
 
-     private $titulos = array(
-		array(
-			'idtitulo' => '400',
-            'nombre' => 'TITULO I.',
-            'descripcion' =>'GENERALIDADES.',
-            'idley' => '100'),
-        array(
-            'idtitulo' => '401',
-            'nombre' => 'TITULO II.',
-            'descripcion' =>'EJERCICIO DE LA INGENIERIA, DE SUS PROFESIONES AFINES Y DE SUS PROFESIONES AUXILIARES.',
-            'idley' => '100'),
-        array(
-            'idtitulo' => '402',
-            'nombre' => 'TITULO III.',
-            'descripcion' =>'DEL CONSEJO PROFESIONAL NACIONAL DE INGENIERIA Y SUS CORRESPONDIENTES REGIONALES O SECCIONALES.', 
-            'idley' => '100'),
-        array(
-            'idtitulo' => '403',
-            'nombre' => 'TITULO IV.',
-            'descripcion' =>'CODIGO DE ÉTICA PARA EL EJERCICIO DE LA INGENIERIA EN GENERAL Y SUS PROFESIONES AFINES Y AUXILIARES.', 
-            'idley' => '100'),
-        array(
-            'idtitulo' => '404',
-            'nombre' => 'TITULO V.',
-            'descripcion' =>'REGIMEN DISCIPLINARIO.',
-            'idley' => '100'),
-        array(
-            'idtitulo' => '405',
-            'nombre' => 'TITULO VI.',
-            'descripcion' =>'DISPOSICIONES FINALES.', 
-            'idley' => '100')
-    );
+    //  private $titulos = array(
+	// 	array(
+	// 		'idtitulo' => '400',
+    //         'nombre' => 'TITULO I.',
+    //         'descripcion' =>'GENERALIDADES.',
+    //         'idley' => '100'),
+    //     array(
+    //         'idtitulo' => '401',
+    //         'nombre' => 'TITULO II.',
+    //         'descripcion' =>'EJERCICIO DE LA INGENIERIA, DE SUS PROFESIONES AFINES Y DE SUS PROFESIONES AUXILIARES.',
+    //         'idley' => '100'),
+    //     array(
+    //         'idtitulo' => '402',
+    //         'nombre' => 'TITULO III.',
+    //         'descripcion' =>'DEL CONSEJO PROFESIONAL NACIONAL DE INGENIERIA Y SUS CORRESPONDIENTES REGIONALES O SECCIONALES.', 
+    //         'idley' => '100'),
+    //     array(
+    //         'idtitulo' => '403',
+    //         'nombre' => 'TITULO IV.',
+    //         'descripcion' =>'CODIGO DE ÉTICA PARA EL EJERCICIO DE LA INGENIERIA EN GENERAL Y SUS PROFESIONES AFINES Y AUXILIARES.', 
+    //         'idley' => '100'),
+    //     array(
+    //         'idtitulo' => '404',
+    //         'nombre' => 'TITULO V.',
+    //         'descripcion' =>'REGIMEN DISCIPLINARIO.',
+    //         'idley' => '100'),
+    //     array(
+    //         'idtitulo' => '405',
+    //         'nombre' => 'TITULO VI.',
+    //         'descripcion' =>'DISPOSICIONES FINALES.', 
+    //         'idley' => '100')
+    // );
     
     
 
@@ -89,25 +94,25 @@ class DatabaseSeeder extends Seeder
         //self::seedUser();
         //$this->command->info('Tabla usuarios inicializada con datos!');
 
-        // self::seedLeyes();
-        // $this->command->info('Tabla leyes inicializada con datos!');
+        self::seedLeyes();
+        $this->command->info('Tabla leyes inicializada con datos!');
 
-        //self::seedTitulos()
+        // self::seedTitulos();
         //$this->command->info('Tabla titulos inicializada con datos!');
 
-        //self::seedCapitulos()
+        //self::seedCapitulos();
         //$this->command->info('Tabla capitulos inicializada con datos!');
 
-        //self::seedArticulos()
+        //self::seedArticulos();
         //$this->command->info('Tabla articulos inicializada con datos!');
 
-        //self::seedItems()
+        //self::seedItems();
         //$this->command->info('Tabla items inicializada con datos!');
 
-        //self::seedParagrafos()
+        //self::seedParagrafos();
         //$this->command->info('Tabla paragrafos inicializada con datos!');
 
-        //self::seedNotas()
+        //self::seedNotas();
         //$this->command->info('Tabla notas inicializada con datos!');
 
     }
@@ -135,7 +140,8 @@ class DatabaseSeeder extends Seeder
         DB::table('leyes')->delete();
         foreach( $this->arrayLeyes as $leyes ) {
             $p = new leyes;
-            $p->nombre = $leyes['titulo'];
+            $p->idLey = $leyes['idley'];
+            $p->Ley = $leyes['ley'];
             $p->imagen = $leyes['imagen'];
             $p->descripcion = $leyes['desc'];
             $p->save();
@@ -147,11 +153,11 @@ class DatabaseSeeder extends Seeder
     private function seedTitulos(){
         DB::table('titulo')->delete();
         foreach( $this->titulos as $titulo) {
-            $p = new leyes;
+            $p = new titulo;
             $p->idTitulo = $titulo['idtitulo'];
             $p->nombre = $titulo['nombre'];
             $p->descripcion = $titulo['descripcion'];
-            $p->idLey = $leyes['idley'];
+            $p->idLey = $titulo['idley'];
             $p->save();
         } 
     }
