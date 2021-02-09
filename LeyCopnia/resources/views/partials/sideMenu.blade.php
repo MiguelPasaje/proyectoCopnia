@@ -1,7 +1,7 @@
 <div class="d-flex menuSide">
     <div class=" bg-primary" id="sidebar-content">
-        <div class="logo">
-            <h4 class="text-light font-weight-bold title-menu " style="margin-top:120px; margin-left: -15px">MENU</h4>
+        <div class="logo" >
+            <h4 class="text-light font-weight-bold title-menu " style="margin-top:70px; margin-left: -15px">MENU</h4>
         </div>
 
         {{-- <i class="far fa-plus-square"></i> signo mas --}}
