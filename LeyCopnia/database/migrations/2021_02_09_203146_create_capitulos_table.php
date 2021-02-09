@@ -14,7 +14,9 @@ class CreateCapitulosTable extends Migration
     public function up()
     {
         Schema::create('Capitulo', function (Blueprint $table) {
-            $table->id();
+            $table->integer('idCapitulo');
+            $table->string('capitulo',45);
+            $table->integer('idTitulo');
             $table->timestamps();
         });
     }

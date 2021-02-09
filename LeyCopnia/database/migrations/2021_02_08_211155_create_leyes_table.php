@@ -14,8 +14,8 @@ class CreateLeyesTable extends Migration
     public function up()
     {
         Schema::create('leyes', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
+            $table->integer('idLey');
+            $table->string('ley');
             $table->string('imagen',100);
             $table->text('descripcion');
             $table->timestamps();

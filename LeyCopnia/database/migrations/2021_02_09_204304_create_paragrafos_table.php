@@ -14,7 +14,9 @@ class CreateParagrafosTable extends Migration
     public function up()
     {
         Schema::create('Paragrafos', function (Blueprint $table) {
-            $table->id();
+            $table->integer("idParagrafo");
+            $table->text('descripcion');
+            $table->integer('idArticulo');
             $table->timestamps();
         });
     }

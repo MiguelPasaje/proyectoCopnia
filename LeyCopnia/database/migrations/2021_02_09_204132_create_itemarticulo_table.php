@@ -14,7 +14,9 @@ class CreateItemarticuloTable extends Migration
     public function up()
     {
         Schema::create('Itemarticulo', function (Blueprint $table) {
-            $table->id();
+            $table->integer('idItem');
+            $table->text('descripcion');
+            $table->integer('idArticulo');
             $table->timestamps();
         });
     }
