@@ -1,4 +1,5 @@
-<!--div class="container">           
+{{-- 
+    <!--div class="container">           
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Left Side Of Navbar >
         <ul class="navbar-nav mr-auto">
@@ -37,14 +38,15 @@
             @endguest
         </ul>
     </div>
-</div-->                           
-                        
-<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+</div-->           
+
+  --}}
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark" style="padding:31px; font-size:18px">
     <div class="container">
-        <a class="navbar-brand" href="/" style="color:#777">
-            <img src="imagenes/libro.png"  width="50" height="50" alt="libro">
+        <a class="navbar-brand" href="/" style="color:rgb(255, 255, 255)">
+            <img src="{{asset('imagenes/libro.png')}} "  width="50" height="50" alt="libro" style="position: fixed; margin-left:-60px; margin-top:-5px;">
             <!--span style="font-size:15pt">&#9821;</span-->
-            INICIO
+            MigFel.org
         </a>
 
         <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
