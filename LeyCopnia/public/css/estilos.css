@@ -125,3 +125,11 @@ i.lateral:hover{
  li .navhov:hover { 
     color:#ff0 !important;
 }
+
+@media(max-width:1000px){
+    #search{
+        
+        width: 100%;
+        
+    }
+}
