@@ -86,15 +86,29 @@ class DatabaseSeeder extends Seeder
     {
      
 
-        /* self::seedUser();
-        $this->command->info('Tabla usuarios inicializada con datos!'); */
+        //self::seedUser();
+        //$this->command->info('Tabla usuarios inicializada con datos!');
 
         // self::seedLeyes();
         // $this->command->info('Tabla leyes inicializada con datos!');
 
-        self::seedTitulos();
-        $this->command->info('Tabla titulos inicializada con datos!');
+        //self::seedTitulos()
+        //$this->command->info('Tabla titulos inicializada con datos!');
 
+        //self::seedCapitulos()
+        //$this->command->info('Tabla capitulos inicializada con datos!');
+
+        //self::seedArticulos()
+        //$this->command->info('Tabla articulos inicializada con datos!');
+
+        //self::seedItems()
+        //$this->command->info('Tabla items inicializada con datos!');
+
+        //self::seedParagrafos()
+        //$this->command->info('Tabla paragrafos inicializada con datos!');
+
+        //self::seedNotas()
+        //$this->command->info('Tabla notas inicializada con datos!');
 
     }
 
@@ -134,22 +148,22 @@ class DatabaseSeeder extends Seeder
         DB::table('titulo')->delete();
         foreach( $this->titulos as $titulo) {
             $p = new leyes;
-            $p->idtitulo = $titulo['idtitulo'];
-            $p->nombre = $titulo['titulo'];
-            $p->imagen = $leyes['imagen'];
-            $p->descripcion = $leyes['desc'];
+            $p->idTitulo = $titulo['idtitulo'];
+            $p->nombre = $titulo['nombre'];
+            $p->descripcion = $titulo['descripcion'];
+            $p->idLey = $leyes['idley'];
             $p->save();
         } 
     }
 
     private function seedCapitulos(){}
 
-    private function seedarticulos(){}
+    private function seedArticulos(){}
 
-    private function seeditems(){}
+    private function seedItems(){}
 
-    private function seedparagrafos(){}
+    private function seedParagrafos(){}
 
-    private function seednotas(){}
+    private function seedNotas(){}
 
 }
