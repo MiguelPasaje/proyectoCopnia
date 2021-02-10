@@ -1,4 +1,4 @@
-{{-- 
+{{--
     <!--div class="container">           
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Left Side Of Navbar >
@@ -38,9 +38,8 @@
             @endguest
         </ul>
     </div>
-</div-->           
-
-  --}}
+</div-->
+    --}}
 <nav class="navbar navbar-expand-lg navbar-dark  bg-dark" style="padding:31px; font-size:18px">
     <div class="container">
         <a class="navbar-brand" href="/" style="color:rgb(255, 255, 255); margin-left:60px;">
@@ -53,7 +52,7 @@
             <span class="navbar-toggler-icon" style="font-size:22px ;"></span>
         </button>
 
-        @if( Auth::check() )
+        @if( true || Auth::check() )
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!--ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
@@ -98,19 +97,88 @@
                             
                         
                     </form>
+
+                    <div class="container">           
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Left Side Of Navbar -->
+                            <ul class="navbar-nav mr-auto">
+                    
+                            </ul>
+                    
+                            <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav ml-auto">
+                                <!-- Authentication Links -->
+                                @guest
+                                    @if (Route::has('login'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        </li>
+                                    @endif
+                                    
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        </li>
+                                    @endif
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }} 
+                                        </a>
+        
+                    
+                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                                  
+                    
+                                            <ul class="navbar-nav navbar-right">
+                                                <li class="nav-item">
+                                                    <form action="{{ url('/logout') }}" method="POST" style="display:inline">
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
+                                                            Cerrar sesión
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        
+                                        </div>
+                                    </li>
+                                @endguest
+                            </ul>
+                        </div>
+                    </div> 
+
+
+
+
+
+
+
+
+
+
                 </ul>
 
-                <ul class="navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <form action="{{ url('/logout') }}" method="POST" style="display:inline">
-                            {{ csrf_field() }}
-                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
-                                Cerrar sesión
-                            </button>
-                        </form>
-                    </li>
-                </ul>
+               
             </div>
+
+
+
+
+            {{--  --}}
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
         @endif
     </div>
 </nav>
