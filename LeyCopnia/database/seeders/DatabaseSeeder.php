@@ -11,6 +11,7 @@ use App\Models\Titulo;
 use App\Models\Capitulo;
 use App\Models\Articulo;
 use App\Models\Items;
+use App\Models\Paragrafo;
 
 class DatabaseSeeder extends Seeder
 {
@@ -1083,7 +1084,112 @@ class DatabaseSeeder extends Seeder
             'descripcion' => 'c) En cumplimiento de orden legítima de autoridad competente emitida con las formalidades legales.', 
             'idarticulo' => '74')
 
-        );
+    );
+
+    private $paragrafos = array(
+		array(
+			'idparagrafo' => '500',
+			'descripcion' => 'PARÁGRAFO. La instrucción, formación, enseñanza, docencia o cátedra dirigida a los estudiantes que aspiren a uno de los títulos profesionales, afines o auxiliares de la Ingeniería, en las materias o asignaturas que impliquen el conocimiento de la profesión, como máxima actividad del ejercicio profesional, solo podrá ser impartida por profesionales de la ingeniería, sus profesiones afines o sus profesiones auxiliares, según el caso, debidamente matriculados.', 
+            'idarticulo' => '21'),
+        array(
+            'idparagrafo' => '501',
+            'descripcion' => 'PARÁGRAFO. En los casos en que los contratantes del sector público o privado, o cualquier usuario de los servicios de ingeniería, pretendan establecer si un profesional se encuentra legalmente habilitado o no, para ejercer la profesión, podrán sin perjuicio de los requisitos establecidos en el presente artículo, requerir al Copnia la expedición del respectivo certificado de vigencia.', 
+            'idarticulo' => '25'),
+        array(
+            'idparagrafo' => '502',
+            'descripcion' => 'PARÁGRAFO 1o. Los títulos académicos de postgrado de los profesionales matriculados no serán susceptibles de inscripción en el registro profesional de ingeniería, por lo tanto, cuando se necesite acreditar tal calidad, bastará con la presentación del título de postgrado respectivo, debidamente otorgado por universidad o institución autorizada por el Estado para tal efecto. Si el título de postgrado fue otorgado en el exterior, solo se aceptará debidamente consularizado o apostillado de acuerdo con las normas que rigen la materia.', 
+            'idarticulo' => '26'),
+        array(
+            'idparagrafo' => '503',
+            'descripcion' => 'PARÁGRAFO 2o. La información que los profesionales aporten como requisitos de su inscripción en el registro profesional respectivo, solamente podrá ser utilizada por el Copnia para efectos del control y vigilancia del ejercicio profesional correspondiente, excepto cuando sea requerida por las demás autoridades de fiscalización y control para lo de su competencia o cuando medie orden judicial.', 
+            'idarticulo' => '26'),
+        array(
+            'idparagrafo' => '504',
+            'descripcion' => 'PARÁGRAFO. También incurre en ejercicio ilegal de la profesión, el profesional de la ingeniería, de alguna de sus profesiones afines o profesiones auxiliares, que estando debidamente inscrito en el registro profesional de ingeniería, ejerza la profesión estando suspendida su matrícula profesional, certificado de inscripción profesional o certificado de matrícula, respectivamente.', 
+            'idarticulo' => '32'),
+        array(
+            'idparagrafo' => '505',
+            'descripcion' => 'PARÁGRAFO. Si quien permite, o encubre el ejercicio de la profesión, por parte de quien no reúne los requisitos establecidos en la presente ley, está matriculado o inscrito como ingeniero o profesión afín o auxiliar, podrá ser suspendido del ejercicio legal de la profesión hasta por el término de cinco años.', 
+            'idarticulo' => '33'),
+        array(
+            'idparagrafo' => '506',
+            'descripcion' => 'PARÁGRAFO. Las multas que se impongan como sanción por el incumplimiento de la presente ley y sus normas reglamentarias, deberán consignarse a favor del Tesoro Municipal del lugar donde se cometa la infracción y serán impuestas por el respectivo Alcalde Municipal o por quien haga sus veces, mediante la aplicación de las normas de procedimiento establecidas para la investigación y sanción de las contravenciones especiales, según el Código Nacional de Policía o norma que lo sustituya o modifique.', 
+            'idarticulo' => '34'),
+        array(
+            'idparagrafo' => '507',
+            'descripcion' => 'PARÁGRAFO. Al representante legal de la persona jurídica que omita el cumplimiento de lo dispuesto en el presente artículo se le aplicarán las sanciones previstas para el ejercicio ilegal de profesión y oficio reglamentado, mediante la aplicación del procedimiento establecido para las contravenciones especiales de policía o aquel que lo sustituya.', 
+            'idarticulo' => '36'),
+        array(
+            'idparagrafo' => '508',
+            'descripcion' => 'PARÁGRAFO. Cuando la obra se trate de aquellas a las que se refiere la Ley 400 de 1997, además de los requisitos establecidos en la presente ley, se deberá cumplir con los establecidos en tal régimen o en la norma que lo sustituya, so pena de incurrir en las sanciones previstas por violación del Código de Ética y el correcto ejercicio de la profesión.', 
+            'idarticulo' => '37'),
+        array(
+            'idparagrafo' => '509',
+            'descripcion' => 'PARÁGRAFO. Lo dispuesto en este artículo se aplicará en todas sus partes, tanto a las propuestas que se presenten, como a los contratos de igual naturaleza y que, con el mismo objetivo, se celebren con las sociedades de economía mixta y con los establecimientos públicos y empresas industriales o comerciales del orden nacional, departamental, distrital o municipal y aquellas descentralizadas por servicios.', 
+            'idarticulo' => '39'),
+        array(
+            'idparagrafo' => '510',
+            'descripcion' => 'PARÁGRAFO. Cuando previa autorización del Ministerio de Trabajo y tratándose de personal estrictamente técnico o científico indispensable, fuere necesaria una mayor participación de profesionales extranjeros que la establecida anteriormente, el patrono o la firma o entidad que requiera tal labor, dispondrá de un (1) año contado a partir de la fecha de la iniciación de labores, para suministrar adecuada capacitación a los profesionales nacionales, con el fin de reemplazar a los extranjeros, hasta completar el mínimo de ochenta por ciento (80%) de nacionales.', 
+            'idarticulo' => '41'),
+        array(
+            'idparagrafo' => '511',
+            'descripcion' => 'PARÁGRAFO 1o.Los requisitos y el trámite establecidos en este artículo se aplicarán para todas las ramas de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares, aunque tengan reglamentación especial y será otorgado por el Consejo Profesional Nacional de Ingeniería, Copnia, exclusivamente. La autoridad competente otorgará la visa respectiva, sin perjuicio del permiso temporal de que trata el presente artículo.(INEXEQUIBLE)', 
+            'idarticulo' => '42'),
+        array(
+            'idparagrafo' => '512',
+            'descripcion' => 'PARÁGRAFO 2o. Se eximen de la obligación de tramitar el Permiso Temporal a que se refiere el presente Artículo, los profesionales extranjeros invitados a dictar conferencias, seminarios, simposios, congresos, talleres de tipo técnico o científico, siempre y cuando no tengan carácter permanente.', 
+            'idarticulo' => '42'),
+        array(
+            'idparagrafo' => '513',
+            'descripcion' => 'PARÁGRAFO 3o. Si el profesional beneficiario del permiso temporal pretende laborar de manera indefinida en el país, deberá homologar o convalidar el título de acuerdo con las normas que rigen la materia y tramitar la matrícula profesional o el certificado de inscripción profesional, según el caso.', 
+            'idarticulo' => '42'),
+        array(
+            'idparagrafo' => '514',
+            'descripcion' => 'PARÁGRAFO. Para ejercer su función de policía administrativa, el Copnia contará con el apoyo, cuando así lo solicite, de las autoridades administrativas y de policía, nacionales, seccionales y locales, según el caso.', 
+            'idarticulo' => '44'),
+        array(
+            'idparagrafo' => '515',
+            'descripcion' => 'PARÁGRAFO. En todo caso, con el lleno de los requisitos establecidos en el presente artículo el Consejo Profesional Nacional de Ingeniería, Copnia, podrá crear Consejos Regionales, donde las necesidades de la función de control, inspección y vigilancia lo exijan. Estos tendrán jurisdicción sobre dos (2) o más departamentos.(INEXEQUIBLE)', 
+            'idarticulo' => '46'),
+        array(
+            'idparagrafo' => '516',
+            'descripcion' => 'PARÁGRAFO 1o. El período de los representantes elegidos en junta será de dos (2) años, pudiendo ser reelegidos solo para el período subsiguiente.', 
+            'idarticulo' => '47'),
+        array(
+            'idparagrafo' => '517',
+            'descripcion' => 'PARÁGRAFO 2o. Los delegados deberán ser ingenieros de las ramas inspeccionadas, vigiladas y controladas por el Copnia, debidamente matriculados.', 
+            'idarticulo' => '47'),
+        array(
+            'idparagrafo' => '518',
+            'descripcion' => 'PARÁGRAFO. El Código de Ética Profesional adoptado mediante la presente ley será el marco del comportamiento profesional del ingeniero en general, de sus profesionales afines y de sus profesionales auxiliares y su violación será sancionada mediante el procedimiento establecido en el presente título.', 
+            'idarticulo' => '48'),
+        array(
+            'idparagrafo' => '519',
+            'descripcion' => 'PARÁGRAFO 1o. No obstante, en los casos de público conocimiento o hecho notorio y cuya gravedad lo amerite, a juicio de la Junta de Consejeros del Consejo Profesional Nacional respectivo, los Consejos Seccionales o Regionales deberán asumir la investigación disciplinaria de oficio.', 
+            'idarticulo' => '79'),
+        array(
+            'idparagrafo' => '520',
+            'descripcion' => 'PARÁGRAFO 2o. La Asesoría Jurídica del Consejo Profesional de Ingeniería respectivo u oficina que haga sus veces, resolverá todos los casos de conflictos de competencias, decisión de única instancia y en contra de la cual no procederá recurso alguno.', 
+            'idarticulo' => '79'),
+        array(
+            'idparagrafo' => '521',
+            'descripcion' => 'PARÁGRAFO. En todo caso que el quejoso sea renuente a rendir la ratificación juramentada y esta fuera absolutamente necesaria para poder continuar la investigación preliminar, por adolecer la queja de elementos suficientes para establecer alguna clase de indicio en contra del profesional o su debida identificación o individualización, la Secretaría Seccional respectiva ordenará sumariamente el archivo de la queja; actuación de la que rendirá informe a la Junta de Consejeros Seccionales y de la que dará aviso al Consejo Profesional Nacional.', 
+            'idarticulo' => '80'),
+        array(
+            'idparagrafo' => '522',
+            'descripcion' => 'PARÁGRAFO. Para el cumplimiento de los fines de la indagación preliminar, el funcionario competente hará uso de los medios de prueba legalmente reconocidos y podrá oír en versión libre y espontánea al profesional que considere necesario para determinar la individualización o identificación de los intervinientes en el hecho investigado.', 
+            'idarticulo' => '83'),
+        array(
+            'idparagrafo' => '523',
+            'descripcion' => 'PARÁGRAFO. Los salvamentos de voto respecto del fallo final, si los hay, deberán constar en el acta de la reunión respectiva.', 
+            'idarticulo' => '88'),
+        array(
+            'idparagrafo' => '524',
+            'descripcion' => 'PARÁGRAFO. Las funciones asignadas por leyes anteriores a Consejos Profesionales de Ingeniería y profesiones afines y auxiliares que a la fecha de la entrada en vigencia de la presente ley, no se hayan instalado o no estén funcionando, pasarán al Consejo Profesional de Ingeniería, Copnia', 
+            'idarticulo' => '94')         
+    );
+
+    
 
      /**
      * Seed the application's database.
@@ -1092,7 +1198,7 @@ class DatabaseSeeder extends Seeder
      */
     
     
-     public function run()
+    public function run()
     {
      
 
@@ -1191,7 +1297,7 @@ class DatabaseSeeder extends Seeder
         } 
     }
 
-    private function seedItems(){
+    private function seedItems(){   
         DB::table('items')->delete();
         foreach( $this->itemArticulo as $item) {
             $p = new Items;
@@ -1202,7 +1308,16 @@ class DatabaseSeeder extends Seeder
         } 
     }
 
-    private function seedParagrafos(){}
+    private function seedParagrafos(){
+        DB::table('paragrafos')->delete();
+        foreach( $this->paragrafos as $paragrafo) {
+            $p = new Paragrafo;
+            $p->idParagrafo= $paragrafo['idparagrafo'];
+            $p->descripcion= $paragrafo['descripcion'];
+            $p->idArticulo= $paragrafo['idarticulo'];
+            $p->save();
+        } 
+    }
 
     private function seedNotas(){}
 
