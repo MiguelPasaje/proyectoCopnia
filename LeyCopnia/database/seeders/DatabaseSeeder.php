@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use DB;
 use App\Models\User;
 use App\Models\leyes;
-use App\Models\titulo;
+use App\Models\Titulo;
 
 
 class DatabaseSeeder extends Seeder
@@ -40,40 +40,40 @@ class DatabaseSeeder extends Seeder
 	 	)
      );
 
-    //  private $titulos = array(
-	// 	array(
-	// 		'idtitulo' => '400',
-    //         'nombre' => 'TITULO I.',
-    //         'descripcion' =>'GENERALIDADES.',
-    //         'idley' => '100'),
-    //     array(
-    //         'idtitulo' => '401',
-    //         'nombre' => 'TITULO II.',
-    //         'descripcion' =>'EJERCICIO DE LA INGENIERIA, DE SUS PROFESIONES AFINES Y DE SUS PROFESIONES AUXILIARES.',
-    //         'idley' => '100'),
-    //     array(
-    //         'idtitulo' => '402',
-    //         'nombre' => 'TITULO III.',
-    //         'descripcion' =>'DEL CONSEJO PROFESIONAL NACIONAL DE INGENIERIA Y SUS CORRESPONDIENTES REGIONALES O SECCIONALES.', 
-    //         'idley' => '100'),
-    //     array(
-    //         'idtitulo' => '403',
-    //         'nombre' => 'TITULO IV.',
-    //         'descripcion' =>'CODIGO DE ÉTICA PARA EL EJERCICIO DE LA INGENIERIA EN GENERAL Y SUS PROFESIONES AFINES Y AUXILIARES.', 
-    //         'idley' => '100'),
-    //     array(
-    //         'idtitulo' => '404',
-    //         'nombre' => 'TITULO V.',
-    //         'descripcion' =>'REGIMEN DISCIPLINARIO.',
-    //         'idley' => '100'),
-    //     array(
-    //         'idtitulo' => '405',
-    //         'nombre' => 'TITULO VI.',
-    //         'descripcion' =>'DISPOSICIONES FINALES.', 
-    //         'idley' => '100')
-    // );
+
     
-    
+    private $titulos = array(
+		array(
+			'idtitulo' => '400',
+            'nombre' => 'TITULO I.',
+            'descripcion' =>'GENERALIDADES.',
+            'idley' => '100'),
+        array(
+            'idtitulo' => '401',
+            'nombre' => 'TITULO II.',
+            'descripcion' =>'EJERCICIO DE LA INGENIERIA, DE SUS PROFESIONES AFINES Y DE SUS PROFESIONES AUXILIARES.',
+            'idley' => '100'),
+        array(
+            'idtitulo' => '402',
+            'nombre' => 'TITULO III.',
+            'descripcion' =>'DEL CONSEJO PROFESIONAL NACIONAL DE INGENIERIA Y SUS CORRESPONDIENTES REGIONALES O SECCIONALES.', 
+            'idley' => '100'),
+        array(
+            'idtitulo' => '403',
+            'nombre' => 'TITULO IV.',
+            'descripcion' =>'CODIGO DE ÉTICA PARA EL EJERCICIO DE LA INGENIERIA EN GENERAL Y SUS PROFESIONES AFINES Y AUXILIARES.', 
+            'idley' => '100'),
+        array(
+            'idtitulo' => '404',
+            'nombre' => 'TITULO V.',
+            'descripcion' =>'REGIMEN DISCIPLINARIO.',
+            'idley' => '100'),
+        array(
+            'idtitulo' => '405',
+            'nombre' => 'TITULO VI.',
+            'descripcion' =>'DISPOSICIONES FINALES.', 
+            'idley' => '100')
+    );
 
 
     
@@ -91,14 +91,14 @@ class DatabaseSeeder extends Seeder
     {
      
 
-        self::seedUser();
-        $this->command->info('Tabla usuarios inicializada con datos!');
+        //self::seedUser();
+        //$this->command->info('Tabla usuarios inicializada con datos!');
 
         //self::seedLeyes();
         //$this->command->info('Tabla leyes inicializada con datos!');
 
-        // self::seedTitulos();
-        //$this->command->info('Tabla titulos inicializada con datos!');
+        self::seedTitulos();
+        $this->command->info('Tabla titulos inicializada con datos!');
 
         //self::seedCapitulos();
         //$this->command->info('Tabla capitulos inicializada con datos!');
@@ -151,11 +151,11 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedTitulos(){
-        DB::table('titulo')->delete();
+        DB::table('titulos')->delete();
         foreach( $this->titulos as $titulo) {
-            $p = new titulo;
+            $p = new Titulo;
             $p->idTitulo = $titulo['idtitulo'];
-            $p->nombre = $titulo['nombre'];
+            $p->titulo = $titulo['nombre'];
             $p->descripcion = $titulo['descripcion'];
             $p->idLey = $titulo['idley'];
             $p->save();

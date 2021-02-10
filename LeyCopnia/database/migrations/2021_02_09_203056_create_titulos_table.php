@@ -13,10 +13,10 @@ class CreateTitulosTable extends Migration
      */
     public function up()
     {
-        Schema::create('Titulo', function (Blueprint $table) {
+        Schema::create('Titulos', function (Blueprint $table) {
             $table->integer('idTitulo');
-            $table->string('nombre',45);
-            $table->string('descripcion',45);
+            $table->string('titulo',45);
+            $table->string('descripcion',100);
             $table->integer('idLey');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateTitulosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Titulo');
+        Schema::dropIfExists('Titulos');
     }
 }
