@@ -13,9 +13,10 @@ class CreateCapitulosTable extends Migration
      */
     public function up()
     {
-        Schema::create('Capitulo', function (Blueprint $table) {
+        Schema::create('Capitulos', function (Blueprint $table) {
             $table->integer('idCapitulo');
             $table->string('capitulo',45);
+            $table->string('descripcion',100);
             $table->integer('idTitulo');
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ class CreateCapitulosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Capitulo');
+        Schema::dropIfExists('Capitulos');
     }
 }
