@@ -12,6 +12,7 @@ use App\Models\Capitulo;
 use App\Models\Articulo;
 use App\Models\Items;
 use App\Models\Paragrafos;
+use App\Models\Notas;
 
 class DatabaseSeeder extends Seeder
 {
@@ -1189,43 +1190,205 @@ class DatabaseSeeder extends Seeder
             'idarticulo' => '94')         
     );
 
+    private $notas = array(
+		array(
+			'idnotas' => '600',//Esta en ARTICULO 4o(id=>23).no tiene items
+			'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE.', 
+            'iditem' => '0',
+            'idarticulo' => '23'),
+        array(
+            'idnotas' => '601',//Esta en ARTICULO 5o(id=>24).no tiene items
+            'nota' => 'Nota: Sentencia C-191 de 2005. Corte Constitucional. El presente artículo fue declarado EXEQUIBLE de manera condicionada, en el entendido de que la facultad otorgada por la presente norma al COPNIA, tiene naturaleza exclusivamente técnica y no implica la posibilidad de agregar o excluir actividades a las que se refiere la clasificación nacional de ocupaciones en los subgrupos 02 y 03 o norma que la sustituya. Sentencia C-667 de 2005, Corte Constitucional. En relación con el presente artículo, la Corte Constitucional declaró estarse a lo resuelto en la Sentencia C-191 de 2005.', 
+            'iditem' => '0',
+            'idarticulo' => '24'),
+        array(
+            'idnotas' => '602',//Esta en ARTICULO 6o(id=>25).no tiene items
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE en el entendido de que los profesionales de disciplinas relacionadas con la ingeniería que cuenten con consejos profesionales propios deberán inscribirse y obtener la matrícula ante estos consejos, después de pagar los derechos respectivos, mientras estos consejos no sean eliminados o modificados por el Legislador, a iniciativa del Gobierno', 
+            'iditem' => '0',
+            'idarticulo' => '25'),
+        array(
+            'idnotas' => '603',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE por los cargos analizados.', 
+            'iditem' => '208',
+            'idarticulo' => '27'),
+        array(
+            'idnotas' => '604',//Esta en ARTICULO 9o(id=>28).no tiene items
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE en el entendido de que los profesionales de disciplinas relacionadas con la ingeniería que cuenten con consejos profesionales propios deberán inscribirse y obtener la Matrícula ante estos consejos, después de pagar los derechos respectivos, mientras estos Consejos no sean eliminados o modificados por el Legislador, a iniciativa del Gobierno', 
+            'iditem' => '0',
+            'idarticulo' => '28'),
+        array(
+            'idnotas' => '605',//Esta en ARTICULO 18(id=>37).no tiene items
+            'nota' => 'Nota: Sentencia C-191 de 2005, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE condicionalmente en el entendido de que la expresión “relacionado con” comprende exclusivamente las relaciones directas y necesarias con el ejercicio de la ingeniería.', 
+            'iditem' => '0',
+            'idarticulo' => '37'),
+        array(
+            'idnotas' => '606',//Esta en ARTICULO 20(id=>39).no tiene items
+            'nota' => 'Nota: Sentencia C-191 de 2005, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE, salvo el aparte tachado del inciso 2o. que se declara INEXEQUIBLE.', 
+            'iditem' => '0',
+            'idarticulo' => '39'),
+        array(
+            'idnotas' => '607',//Esta en ARTICULO 23(id=>42).no tiene items
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado CONDICIONALMENTE EXEQUIBLE "... en el entendido de que los profesionales titulados y domiciliados en el exterior en disciplinas relacionadas con la ingeniería y que deseen obtener un permiso temporal para trabajar deberán acudir al COPNIA, siempre y cuando su especialidad no cuente con un consejo profesional propio encargado de esa función. La declaración se restringe al cargo analizado", salvo el aparte tachado que se declara INEXEQUIBLE', 
+            'iditem' => '0',
+            'idarticulo' => '42'),
+        array(
+            'idnotas' => '608',//Esta en ARTICULO 24(id=>43).no tiene items
+            'nota' => 'Notas:Mediante la Sentencia C-078 de 2003, la Corte Constitucional revisó las objeciones presidenciales a los artículos25, 26, 27, 28 y 80 delproyecto de Ley No. 44 de 2001 - Senado de la República-,218 de 2002 -Cámara de Representantes–, en cumplimiento de lo dispuesto en el artículo 167 de la Constitución Política.Sentencia C-649 de 2003, Corte Constitucional. Se declaró cumplida la exigencia constitucional del artículo 167 de la Carta Política.', 
+            'iditem' => '0',
+            'idarticulo' => '43'),
+        array(
+            'idnotas' => '609',//Esta en ARTICULO 25(id=>44).no tiene items
+            'nota' => 'Notas: Mediante la Sentencia C-078 de 2003, la Corte Constitucional revisó las objeciones presidenciales a los artículos25, 26, 27, 28 y 80 delproyecto de Ley No. 44 de 2001 - Senado de la República-,218 de 2002 -Cámara de Representantes–, en cumplimiento de lo dispuesto en el artículo 167 de la Constitución Política. Sentencia C-649 de 2003, Corte Constitucional. Se declaró cumplida la exigencia constitucional del artículo 167 de la Carta Política.', 
+            'iditem' => '0',
+            'idarticulo' => '44'),
+        array(
+            'idnotas' => '610',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. Literal n) declarado INEXEQUIBLE', 
+            'iditem' => '222',
+            'idarticulo' => '45'),
+        array(
+            'idnotas' => '611',
+            'nota' => 'Notas: Mediante la Sentencia C-078 de 2003, la Corte Constitucional revisó las objeciones presidenciales a los artículos25, 26, 27, 28 y 80 delproyecto de Ley No. 44 de 2001 - Senado de la República-,218 de 2002 -Cámara de Representantes–, en cumplimiento de lo dispuesto en el artículo 167 de la Constitución Política. Sentencia C-649 de 2003, Corte Constitucional. Se declaró cumplida la exigencia constitucional del artículo 167 de la Carta Política.', 
+            'iditem' => '230',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '612',//Esta en ARTICULO 27(id=>46).no tiene items
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado INEXEQUIBLE.', 
+            'iditem' => '0',
+            'idarticulo' => '46'),
+        array(
+            'idnotas' => '613',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal c) declarado INEXEQUIBLE.', 
+            'iditem' => '233',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '614',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal d) declarado INEXEQUIBLE.', 
+            'iditem' => '234',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '615',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal d) declarado CONDICIONALMENTE EXEQUIBLE, "... en el entendido de que las conductas descritas no son sancionables cuando se cometan respecto de un colega o socio en un contexto ajeno al ámbito profesional".', 
+            'iditem' => '241',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '616',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal e) declarado INEXEQUIBLE.', 
+            'iditem' => '242',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '617',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal h) declarado INEXEQUIBLE.', 
+            'iditem' => '245',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '618',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal a) declarado INEXEQUIBLE.', 
+            'iditem' => '250',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '619',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal b) declarado INEXEQUIBLE.', 
+            'iditem' => '251',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '620',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal c) declarado INEXEQUIBLE.', 
+            'iditem' => '252',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '621',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal b) declarado INEXEQUIBLE.', 
+            'iditem' => '266',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '622',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal c) declarado CONDICIONALMENTE EXEQUIBLE " ... en el entendido de que, para efectos disciplinarios, al definir si la retribución es justa y adecuada en cada caso la autoridad deberá tener como único parámetro de juicio todas las normas jurídicas vigentes, aplicables a la relación que se examina".', 
+            'iditem' => '273',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '623',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. La Corte Constitucional se declaró INHIBIDA de fallar sobre este literal por ineptitud de la demanda.', 
+            'iditem' => '279',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '624',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. La Corte Constitucional se declaró INHIBIDA de fallar sobre este literal por ineptitud de la demanda.', 
+            'iditem' => '280',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '625',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. La Corte Constitucional se declaró INHIBIDA de fallar sobre este literal por ineptitud de la demanda.', 
+            'iditem' => '281',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '626',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal b) declarado INEXEQUIBLE.', 
+            'iditem' => '288',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '627',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal b) declarado INEXEQUIBLE.', 
+            'iditem' => '290',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '628',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal c) declarado INEXEQUIBLE.', 
+            'iditem' => '291',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '629',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El Literal b) declarado INEXEQUIBLE.', 
+            'iditem' => '293',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '630',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. La Corte Constitucional se declaró INHIBIDA de fallar sobre este literal por ineptitud de la demanda.', 
+            'iditem' => '294',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '631',
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. La Corte Constitucional se declaró INHIBIDA de fallar sobre este literal por ineptitud de la demanda.', 
+            'iditem' => '296',
+            'idarticulo' => '0'),
+        array(
+            'idnotas' => '632',///Esta en ARTICULO 78(id=>94).no tiene items
+            'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. Artículo CONDICIONALMENTE EXEQUIBLE "... en el entendido de que la derogación de normas que allí se ordena no comprende las relacionadas con la creación y asignación de funciones a los consejos profesionales existentes para especialidades de la ingeniería y las profesiones afines y auxiliares de esa disciplina". Auto 226 de 2003, Corte Constitucional. La Corte Constitucional dispuso: En consecuencia, los Artículos 26, 27 y 28 de la Ley 435 de 1998, están vigentes y aplican con todos sus efectos para el COPNIA.',
+            'iditem' => '0',
+            'idarticulo' => '94')
+    );
     
-
      /**
      * Seed the application's database.
      *
      * @return void
      */
     
-    
     public function run()
     {
-     
+        self::seedUser();
+        $this->command->info('Tabla usuarios inicializada con datos!');
 
-        //self::seedUser();
-        //$this->command->info('Tabla usuarios inicializada con datos!');
+        self::seedLeyes();
+        $this->command->info('Tabla leyes inicializada con datos!');
 
-        //self::seedLeyes();
-        //$this->command->info('Tabla leyes inicializada con datos!');
+        self::seedTitulos();
+        $this->command->info('Tabla titulos inicializada con datos!');
 
-        //self::seedTitulos();
-        //$this->command->info('Tabla titulos inicializada con datos!');
+        self::seedCapitulos();
+        $this->command->info('Tabla capitulos inicializada con datos!');
 
-        //self::seedCapitulos();
-        //$this->command->info('Tabla capitulos inicializada con datos!');
+        self::seedArticulos();
+        $this->command->info('Tabla articulos inicializada con datos!');
 
-        //self::seedArticulos();
-        //$this->command->info('Tabla articulos inicializada con datos!');
-
-        //self::seedItems();
-        //$this->command->info('Tabla items inicializada con datos!');
+        self::seedItems();
+        $this->command->info('Tabla items inicializada con datos!');
 
         self::seedParagrafos();
         $this->command->info('Tabla paragrafos inicializada con datos!');
 
-        //self::seedNotas();
-        //$this->command->info('Tabla notas inicializada con datos!');
-
+        self::seedNotas();
+        $this->command->info('Tabla notas inicializada con datos!');
     }
 
     private function seedUser(){
@@ -1319,6 +1482,16 @@ class DatabaseSeeder extends Seeder
         } 
     }
 
-    private function seedNotas(){}
+    private function seedNotas(){
+        DB::table('notas')->delete();
+        foreach( $this->notas as $nota) {
+            $p = new Notas;
+            $p->idNota= $nota['idnotas'];
+            $p->nota= $nota['nota'];
+            $p->idItem= $nota['iditem'];
+            $p->idArticulo= $nota['idarticulo'];
+            $p->save();
+        }
+    }
 
 }
