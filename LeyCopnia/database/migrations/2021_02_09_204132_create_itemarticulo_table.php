@@ -13,7 +13,7 @@ class CreateItemarticuloTable extends Migration
      */
     public function up()
     {
-        Schema::create('Itemarticulo', function (Blueprint $table) {
+        Schema::create('Items', function (Blueprint $table) {
             $table->integer('idItem');
             $table->text('descripcion');
             $table->integer('idArticulo');
@@ -28,6 +28,6 @@ class CreateItemarticuloTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Itemarticulo');
+        Schema::dropIfExists('Items');
     }
 }

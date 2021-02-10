@@ -10,6 +10,8 @@ use App\Models\leyes;
 use App\Models\Titulo;
 use App\Models\Capitulo;
 use App\Models\Articulo;
+use App\Models\Items;
+
 class DatabaseSeeder extends Seeder
 {
     
@@ -551,6 +553,537 @@ class DatabaseSeeder extends Seeder
             'idcapitulo' => '01')          
     );
 
+    private $itemArticulo = array(
+		array(
+			'iditem' => '200',
+			'descripcion' => 'a) Los estudios, la planeación, el diseño, el cálculo, la programación, la asesoría, la consultoría, la interventoría, la construcción, el mantenimiento y la administración de construcciones de edificios y viviendas de toda índole, de puentes, presas, muelles, canales, puertos, carreteras, vías urbanas y rurales, aeropuertos, ferrocarriles, teleféricos, acueductos, alcantarillados, riesgos (sic), drenajes y pavimentos; oleoductos, gasoductos, poliductos y en general líneas de conducción y transporte de hidrocarburos; líneas de transmisión eléctrica y en general todas aquellas obras de infraestructura para el servicio de la comunidad;', 
+            'idarticulo' => '21'),
+        array(
+            'iditem' => '201',
+            'descripcion' => 'b) Los estudios, proyectos, diseños y procesos industriales, textiles, electromecánicos, termoeléctricos, energéticos, mecánicos, eléctricos, electrónicos, de computación, de sistemas, teleinformáticos, agroindustriales, agronómicos, agrícolas, agrológicos, de alimentos, agrometeorológicos, ambientales, geofísicos, forestales, químicos, metalúrgicos, mineros, de petróleos, geológicos, geodésicos, geográficos, topográficos e hidrológicos;', 
+            'idarticulo' => '21'),
+        array(
+            'iditem' => '202',
+            'descripcion' => 'c) La planeación del transporte aéreo, terrestre y náutico y en general, todo asunto relacionado con la ejecución o desarrollo de las tareas o actividades de las profesiones especificadas en los subgrupos 02 y 03 de la Clasificación Nacional de Ocupaciones o normas que la sustituyan o complementen, en cuanto a la ingeniería, sus profesiones afines y auxiliares se refiere. También se entiende por ejercicio de la profesión para los efectos de esta ley, el presentarse o anunciarse como ingeniero o acceder a un cargo de nivel profesional utilizando dicho título.', 
+            'idarticulo' => '21'),
+        array(
+            'iditem' => '203',
+            'descripcion' => 'a) Hayan adquirido el título académico de Ingeniero en cualquiera de sus ramas, otorgado por Instituciones de Educación Superior oficialmente reconocidas, de acuerdo con las normas legales vigentes;', 
+            'idarticulo' => '26'),
+        array(
+            'iditem' => '204',
+            'descripcion' => 'b) Hayan adquirido el título académico de Ingeniero en cualquiera de sus ramas, otorgado por Instituciones de Educación Superior que funcionen en países con los cuales Colombia haya celebrado tratados o convenios sobre reciprocidad de títulos, situación que debe ser avalada por el ICFES o por el organismo que se determine para tal efecto;', 
+            'idarticulo' => '26'),
+        array(
+            'iditem' => '205',
+            'descripcion' => 'c) Hayan adquirido el título académico de Ingeniero en cualquiera de sus ramas, otorgado por Instituciones de Educación Superior que funcionen en países con los cuales Colombia no haya celebrado tratados o convenios sobre reciprocidad de títulos; siempre y cuando hayan obtenido la homologación o convalidación del título académico ante las autoridades competentes, conforme con las normas vigentes sobre la materia.', 
+            'idarticulo' => '26'),
+        array(
+            'iditem' => '206',
+            'descripcion' => 'a) Hayan adquirido el título académico en alguna de sus profesiones afines o de las profesiones auxiliares de la ingeniería, otorgado por instituciones de Educación Superior oficialmente reconocidas, de acuerdo con las normas legales vigentes;', 
+            'idarticulo' => '27'),
+        array(
+            'iditem' => '207',
+            'descripcion' => 'b) Hayan adquirido el título académico en alguna de las profesiones afines o de las profesiones auxiliares de la ingeniería, otorgado por instituciones de Educación Superior que funcionen en países con los cuales Colombia haya celebrado tratados o convenios sobre reciprocidad de títulos;', 
+            'idarticulo' => '27'),
+        array(
+            'iditem' => '208',
+            'descripcion' => 'c) Hayan adquirido el título académico en alguna de las profesiones afines o de las profesiones auxiliares de la ingeniería, otorgado por instituciones de Educación Superior que funcionen en países con los cuales Colombia no haya celebrado tratados o convenios sobre reciprocidad de títulos; siempre y cuando hayan obtenido la homologación o convalidación del título académico ante las autoridades competentes, de acuerdo con las normas vigentes.', 
+            'idarticulo' => '27'),
+        array(
+            'iditem' => '209',
+            'descripcion' => 'a) Dictar su propio reglamento interno y el de los Consejos Seccionales o Regionales;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '210',
+            'descripcion' => 'b) (sic) Confirmar, aclarar, derogar o revocar las resoluciones de aprobación o denegación de expedición de matrículas profesionales, de certificados de inscripción profesional y de certificados de matrícula profesional, a profesionales de la ingeniería, de sus profesiones afines y de sus profesionales auxiliares, respectivamente, expedidas por los Consejos Seccionales o Regionales;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '211',
+            'descripcion' => 'c) Expedir las tarjetas de matrícula, de certificados de inscripción profesional y de certificado de matrícula a los ingenieros, profesionales afines y profesionales auxiliares de la ingeniería, respectivamente;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '212',
+            'descripcion' => 'd) Resolver en única instancia sobre la expedición o cancelación de los permisos temporales;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '213',
+            'descripcion' => 'e) Denunciar ante las autoridades competentes las violaciones al ejercicio legal de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '214',
+            'descripcion' => 'f) Denunciar ante las autoridades competentes los delitos y contravenciones de que tenga conocimiento con ocasión de sus funciones;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '215',
+            'descripcion' => 'g) Resolver en segunda instancia, los recursos que se interpongan contra las determinaciones que pongan fin a las actuaciones de primera instancia de los Consejos Seccionales o Regionales;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '216',
+            'descripcion' => 'h) Implementar y mantener, dentro de las técnicas de la informática y la tecnología moderna, el registro profesional de ingeniería correspondiente a los profesionales de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '217',
+            'descripcion' => 'i) Emitir conceptos y responder consultas sobre aspectos relacionados con el ejercicio de la ingeniería, sus profesiones afines y sus profesiones auxiliares, cuando así se le solicite para cualquier efecto legal o profesional;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '218',
+            'descripcion' => 'j) Servir de cuerpo consultivo oficial del Gobierno, en todos los asuntos inherentes a la reglamentación de la ingeniería, de sus profesiones afines y de sus profesiones auxiliares;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '219',
+            'descripcion' => 'k) Establecer el valor de los derechos provenientes del cobro de certificados y constancias, el cual será fijado de manera razonable de acuerdo con su determinación; y de los recursos provenientes por los servicios de derecho de matrícula, tarjetas y permisos temporales. La tasa se distribuirá en forma equitativa entre los usuarios a partir de criterios relevantes que recuperan los costos del servicio; en las condiciones que fije el reglamento que adopte el Gobierno Nacional, señalando el sistema y el método, para definir la recuperación de los costos de los servicios que se prestan a los usuarios o la participación de los servicios que se les proporcionan y la forma de hacer su reparto según el artículo 338 de la Constitución Política, derechos que no podrán exceder de la suma equivalente a un (1) salario mínimo legal mensual vigente;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '220',
+            'descripcion' => 'l) Aprobar y ejecutar, en forma autónoma, el presupuesto del Consejo Profesional Nacional de Ingeniería, Copnia, y el de los Consejos Regionales o Seccionales;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '221',
+            'descripcion' => 'm) Con el apoyo de las demás autoridades administrativas y de policía, inspeccionar, vigilar y controlar el ejercicio profesional de las personas naturales o jurídicas que ejerzan la ingeniería o alguna de sus profesiones auxiliares;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '222',
+            'descripcion' => 'n) Crear, reestructurar o suprimir sus Consejos Regionales o Seccionales, de acuerdo con las necesidades propias de la función de inspección, control y vigilancia del ejercicio profesional y las disponibilidades presupuestales respectivas;(INEXEQUIBLE)', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '223',
+            'descripcion' => 'o) Adoptar su propia planta de personal de acuerdo con sus necesidades y determinación;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '224',
+            'descripcion' => 'p) Velar por el cumplimiento de la presente ley y de las demás normas que la reglamenten y complementen;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '225',
+            'descripcion' => '', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '226',
+            'descripcion' => 'q) Presentar al Ministerio de Relaciones Exteriores, observaciones sobre la expedición de visas a ingenieros, profesionales afines y profesionales auxiliares de la ingeniería, solicitadas con el fin de ejercer su profesión en el territorio nacional;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '227',
+            'descripcion' => 'r) Presentar al Ministerio de Educación Nacional, observaciones sobre la aprobación de los programas de estudios y establecimientos educativos relacionados con la ingeniería, las profesiones afines y las profesiones auxiliares de esta;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '228',
+            'descripcion' => 's) Denunciar ante las autoridades competentes las violaciones de las disposiciones que reglamentan el ejercicio de la ingeniería, sus profesiones afines y sus profesiones auxiliares y solicitar de aquellas la imposición de las sanciones correspondientes;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '229',
+            'descripcion' => 't) Atender las quejas o denuncias hechas sobre la conducta de los ingenieros, profesionales afines y profesionales auxiliares de la ingeniería, que violen los mandatos de la presente ley, del correcto ejercicio y del Código de Ética Profesional absolviendo o sancionando, oportunamente, a los profesionales investigados;', 
+            'idarticulo' => '45'),
+        array(
+            'iditem' => '230',
+            'descripcion' => 'u) Las demás que le señalen la ley y demás normas reglamentarias y complementarias.', 
+            'idarticulo' => '45'),
+        array(
+        'iditem' => '231',
+        'descripcion' => 'a) Cumplir con los requerimientos, citaciones y demás diligencias que formule u ordene el Consejo Profesional Nacional de Ingeniería respectivo o cualquiera de sus Consejos Seccionales o Regionales;', 
+        'idarticulo' => '50'),
+        array(
+            'iditem' => '232',
+            'descripcion' => 'b) Custodiar y cuidar los bienes, valores, documentación e información que por razón del ejercicio de su profesión, se le hayan encomendado o a los cuales tenga acceso; impidiendo o evitando su sustracción, destrucción, ocultamiento o utilización indebidos, de conformidad con los fines a que hayan sido destinados;', 
+            'idarticulo' => '50'),
+        array(
+            'iditem' => '233',
+            'descripcion' => 'c) Tratar con respeto, imparcialidad y rectitud a todas las personas con quienes tenga relación con motivo del ejercicio de la profesión;(INEXEQUIBLE)', 
+            'idarticulo' => '50'),
+        array(
+            'iditem' => '234',
+            'descripcion' => 'd) Registrar en el Consejo Profesional Nacional de Ingeniería respectivo o en alguno de sus Consejos Seccionales o Regionales, su domicilio o dirección de la residencia y teléfono, dando aviso oportuno de cualquier cambio;(NEXEQUIBLE)', 
+            'idarticulo' => '50'),
+        array(
+            'iditem' => '235',
+            'descripcion' => 'e) Permitir el acceso inmediato a los representantes del Consejo Profesional Nacional de Ingeniería respectivo y autoridades de policía, a los lugares donde deban adelantar sus investigaciones y el examen de los libros, documentos y diligencias correspondientes, así como prestarles la necesaria colaboración para el cumplido desempeño de sus funciones;', 
+            'idarticulo' => '50'),
+        array(
+            'iditem' => '236',
+            'descripcion' => 'f) Denunciar los delitos, contravenciones y faltas contra este Código de Ética, de que tuviere conocimiento con ocasión del ejercicio de su profesión, aportando toda la información y pruebas que tuviere en su poder;', 
+            'idarticulo' => '50'),
+        array(
+                'iditem' => '237',
+                'descripcion' => 'g) Los demás deberes incluidos en la presente ley y los indicados en todas las normas legales y técnicas relacionados con el ejercicio de su profesión.', 
+                'idarticulo' => '50'),
+        array(
+            'iditem' => '238',
+            'descripcion' => 'a) Nombrar, elegir, dar posesión o tener a su servicio, para el desempeño de un cargo privado o público que requiera ser desempeñado por profesionales de la ingeniería o alguna de sus profesiones afines o auxiliares, en forma permanente o transitoria, a personas que ejerzan ilegalmente la profesión;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '239',
+            'descripcion' => 'b) Permitir, tolerar o facilitar el ejercicio ilegal de las profesiones reguladas por esta ley;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '240',
+            'descripcion' => 'c) Solicitar o aceptar comisiones en dinero o en especie por concepto de adquisición de bienes y servicios para su cliente, sociedad, institución, etc., para el que preste sus servicios profesionales, salvo autorización legal o contractual;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '241',
+            'descripcion' => 'd) Ejecutar actos de violencia, malos tratos, injurias o calumnias contra superiores, subalternos, compañeros de trabajo, socios, clientes o funcionarios del Consejo Profesional Nacional de Ingeniería respectivo o alguno de sus Consejos Regionales o Seccionales;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '242',
+            'descripcion' => 'e) Ejecutar en el lugar donde ejerza su profesión, actos que atenten contra la moral y las buenas costumbres;(INEXEQUIBLE)', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '243',
+            'descripcion' => 'f) El reiterado e injustificado incumplimiento de las obligaciones civiles, comerciales o laborales, que haya contraído con ocasión del ejercicio de su profesión o de actividades relacionadas con este;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '244',
+            'descripcion' => 'g) Causar, intencional o culposamente, daño o pérdida de bienes, elementos, equipos, herramientas o documentos que hayan llegado a su poder por razón del ejercicio de su profesión;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '245',
+            'descripcion' => 'h) Proferir, en actos oficiales o privados relacionados con el ejercicio de la profesión, expresiones injuriosas o calumniosas contra el Consejo Profesional Nacional de Ingeniería, los miembros de la Junta de Consejeros o sus funcionarios; contra cualquier autoridad relacionada con el ámbito de la ingeniería o contra alguna de sus agremiaciones o sus directivas;(INEXEQUIBLE)', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '246',
+            'descripcion' => 'i) Incumplir las decisiones disciplinarias que imponga el Consejo Profesional Nacional de Ingeniería respectivo u obstaculizar su ejecución;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '247',
+            'descripcion' => 'j) Solicitar o recibir directamente o por interpuesta persona, gratificaciones, dádivas o recompensas en razón del ejercicio de su profesión, salvo autorización contractual o legal;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '248',
+            'descripcion' => 'k) Participar en licitaciones, concursar o suscribir contratos estatales cuyo objeto esté relacionado con el ejercicio de la ingeniería, estando incurso en alguna de las inhabilidades e incompatibilidades que establece la Constitución y la ley;', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '249',
+            'descripcion' => 'l) Las demás prohibiciones incluidas en la presente ley y normas que la complementen y reglamenten.', 
+            'idarticulo' => '51'),
+        array(
+            'iditem' => '250',
+            'descripcion' => 'a) Interesarse por el bien público, con el objeto de contribuir con sus conocimientos, capacidad y experiencia para servir a la humanidad; <Jurisprudencia Vigencia>(INEXEQUIBLE)', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '251',
+            'descripcion' => 'b) Cooperar para el progreso de la sociedad, aportando su colaboración intelectual y material en obras culturales, ilustración técnica, ciencia aplicada e investigación científica;(INEXEQUIBLE)', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '252',
+            'descripcion' => 'c) Aplicar el máximo de su esfuerzo en el sentido de lograr una clara expresión hacia la comunidad de los aspectos técnicos y de los asuntos relacionados con sus respectivas, profesiones y su ejercicio;(INEXEQUIBLE)', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '253',
+            'descripcion' => '', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '254',
+            'descripcion' => 'd) Estudiar cuidadosamente el ambiente que será afectado en cada propuesta (sic) de tarea (sic), evaluando los impactos ambientales en los ecosistemas involucrados, urbanizados o naturales, incluido el entorno socioeconómico, seleccionando la mejor alternativa para contribuir a un desarrollo ambientalmente sano y sostenible, con el objeto de lograr la mejor calidad de vida para la población;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '255',
+            'descripcion' => 'e) Rechazar toda clase de recomendaciones en trabajos que impliquen daños evitables para el entorno humano y la naturaleza, tanto en espacios abiertos, como en el interior de edificios, evaluando su impacto ambiental, tanto en corto como en largo plazo;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '256',
+            'descripcion' => 'f) Ejercer la profesión sin supeditar sus conceptos o sus criterios profesionales a actividades partidistas;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '257',
+            'descripcion' => 'g) Ofrecer desinteresadamente sus servicios profesionales en caso de calamidad pública;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '258',
+            'descripcion' => 'h) Proteger la vida y salud de los miembros de la comunidad, evitando riesgos innecesarios en la ejecución de los trabajos;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '259',
+            'descripcion' => 'i) Abstenerse de emitir conceptos profesionales, sin tener la convicción absoluta de estar debidamente informados al respecto;', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '260',
+            'descripcion' => 'j) Velar por la protección de la integridad del patrimonio nacional.', 
+            'idarticulo' => '52'),
+        array(
+            'iditem' => '261',
+            'descripcion' => 'a) Ofrecer o aceptar trabajos en contra de las disposiciones legales vigentes, o aceptar tareas que excedan la incumbencia que le otorga su título y su propia preparación;', 
+            'idarticulo' => '53'),
+        array(
+            'iditem' => '262',
+            'descripcion' => 'b) Imponer su firma, a título gratuito u oneroso, en planos, especificaciones, dictámenes, memorias, informes, solicitudes de licencias urbanísticas, solicitudes de licencias de construcción y toda otra documentación relacionada con el ejercicio profesional, que no hayan sido estudiados, controlados o ejecutados personalmente;', 
+            'idarticulo' => '53'),
+        array(
+            'iditem' => '263',
+            'descripcion' => 'c) Expedir, permitir o contribuir para que se expidan títulos, diplomas, matrículas, tarjetas de matrícula profesional; certificados de inscripción profesional o tarjetas de certificado de inscripción profesional y/o certificados de vigencia de matrícula profesional, a personas que no reúnan los requisitos legales o reglamentarios para ejercer estas profesiones o no se encuentren debidamente inscritos o matriculados;', 
+            'idarticulo' => '53'),
+        array(
+            'iditem' => '264',
+            'descripcion' => 'd) Hacer figurar su nombre en anuncios, membretes, sellos, propagandas y demás medios análogos junto con el de personas que ejerzan ilegalmente la profesión;', 
+            'idarticulo' => '53'),
+        array(
+            'iditem' => '265',
+            'descripcion' => 'e) iniciar o permitir el inicio de obras de construcción sin haber obtenido de la autoridad competente la respectiva licencia o autorización.', 
+            'idarticulo' => '53'),
+        array(
+            'iditem' => '266',
+            'descripcion' => 'a) Contribuir con su conducta profesional y con todos los medios a su alcance para que en el consenso público se preserve un exacto concepto de estas profesiones, de su dignidad y del alto respeto que merecen;(INEXEQUIBLE)', 
+            'idarticulo' => '54'),
+        array(
+            'iditem' => '267',
+            'descripcion' => 'b) Respetar y hacer respetar todas las disposiciones legales y reglamentaras que incidan en actos de estas profesiones, así como denunciar todas sus transgresiones;', 
+            'idarticulo' => '54'),
+        array(
+            'iditem' => '268',
+            'descripcion' => 'c) Velar por el buen prestigio de estas profesiones;', 
+            'idarticulo' => '54'),
+        array(
+            'iditem' => '269',
+            'descripcion' => 'd) Sus medios de propaganda deberán ajustarse a las reglas de la prudencia y al decoro profesional, sin hacer uso de medios de publicidad con avisos exagerados que den lugar a equívocos sobre su especialidad o idoneidad profesional.', 
+            'idarticulo' => '54'),
+        array(
+            'iditem' => '270',
+            'descripcion' => 'a) Recibir o conceder comisiones, participaciones u otros beneficios ilegales o injustificados con el objeto de gestionar, obtener o acordar designaciones de índole profesional o la encomienda de trabajo profesional.', 
+            'idarticulo' => '55'),
+        array(
+            'iditem' => '271',
+            'descripcion' => 'a) Abstenerse de emitir públicamente juicios adversos sobre la actuación de algún colega, señalando errores profesionales en que presuntamente haya incurrido, a no ser de que ello sea indispensable por razones ineludibles de interés general o, que se le haya dado anteriormente la posibilidad de reconocer y rectificar aquellas actuaciones y errores, haciendo dicho profesional caso omiso de ello;', 
+            'idarticulo' => '56'),
+        array(
+            'iditem' => '272',
+            'descripcion' => 'b) Obrar con la mayor prudencia y diligencia cuando se emitan conceptos sobre las actuaciones de los demás profesionales;', 
+            'idarticulo' => '56'),
+        array(
+            'iditem' => '273',
+            'descripcion' => 'c) Fijar para los colegas que actúen como colaboradores o empleados suyos, salarios, honorarios, retribuciones o compensaciones justas y adecuadas, acordes con la dignidad de las profesiones y la importancia de los servicios que prestan;', 
+            'idarticulo' => '56'),
+        array(
+            'iditem' => '274',
+            'descripcion' => 'd) Respetar y reconocer la propiedad intelectual de los demás profesionales sobre sus diseños y proyectos.', 
+            'idarticulo' => '56'),
+        array(
+            'iditem' => '275',
+            'descripcion' => 'a) Utilizar sin autorización de sus legítimos autores y para su aplicación en trabajos profesionales propios, los estudios, cálculos, planos, diseños y software y demás documentación perteneciente a aquellos, salvo que la tarea profesional lo requiera, caso en el cual se deberá dar aviso al autor de tal utilización;', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '276',
+            'descripcion' => 'b) Difamar, denigrar o criticar injustamente a sus colegas, o contribuir en forma directa o indirecta a perjudicar su reputación o la de sus proyectos o negocios con motivo de su actuación profesional;', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '277',
+            'descripcion' => 'c) Usar métodos de competencia desleal con los colegas;', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '278',
+            'descripcion' => 'd) Designar o influir para que sean designados en cargos técnicos que deban ser desempeñados por los profesionales de que trata el presente Código, a personas carentes de los títulos y calidades que se exigen legalmente;', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '279',
+            'descripcion' => 'e) Proponer servicios con reducción de precios, luego de haber conocido las propuestas de otros profesionales;', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '280',
+            'descripcion' => 'f) Revisar trabajos de otro profesional sin conocimiento y aceptación previa del mismo, a menos que este se haya separado completamente de tal trabajo.', 
+            'idarticulo' => '57'),
+        array(
+            'iditem' => '281',
+            'descripcion' => 'a) Mantener el secreto y reserva, respecto de toda circunstancia relacionada con el cliente y con los trabajos que para él se realizan, salvo obligación legal de revelarla o requerimiento del Consejo Profesional respectivo;', 
+            'idarticulo' => '58'),
+        array(
+            'iditem' => '282',
+            'descripcion' => 'b) Manejar con honestidad y pulcritud los fondos que el cliente le confiare con destino a desembolsos exigidos por los trabajos a su cargo y rendir cuentas claras, precisas y frecuentes. Todo ello independientemente y sin perjuicio de lo establecido en las leyes vigentes;', 
+            'idarticulo' => '58'),
+        array(
+            'iditem' => '283',
+            'descripcion' => 'c) Dedicar toda su aptitud y atender con la mayor diligencia y probidad, los asuntos encargados por su cliente;', 
+            'idarticulo' => '58'),
+        array(
+            'iditem' => '284',
+            'descripcion' => 'd) Los profesionales que dirijan el cumplimiento de contratos entre sus clientes y terceras personas, son ante todo asesores y guardianes de los intereses de sus clientes y en ningún caso, les es lícito actuar en perjuicio de aquellos terceros.', 
+            'idarticulo' => '58'),
+        array(
+            'iditem' => '285',
+            'descripcion' => 'a) Ofrecer la prestación de servicios cuyo objeto, por cualquier razón de orden técnico, jurídico, reglamentario, económico o social, sea de dudoso o imposible cumplimiento, o los que por circunstancias de idoneidad personal, no pudiere satisfacer;', 
+            'idarticulo' => '59'),
+        array(
+            'iditem' => '286',
+            'descripcion' => 'b) Aceptar para su beneficio o el de terceros, comisiones, descuentos, bonificaciones u otras análogas ofrecidas por proveedores de equipos, insumos, materiales, artefactos o estructuras, por contratistas y/o por otras personas directamente interesadas en la ejecución de los trabajos que proyecten o dirijan, salvo autorización legal o contractual.', 
+            'idarticulo' => '59'),
+        array(
+            'iditem' => '287',
+            'descripcion' => 'a) Actuar de manera imparcial, cuando por las funciones de su cargo público o privado, sean responsables de fijar, preparar o evaluar pliegos de condiciones de licitaciones o concursos;', 
+            'idarticulo' => '60'),
+        array(
+            'iditem' => '288',
+            'descripcion' => 'b) Los profesionales que se hallen ligados entre sí por razón de jerarquía, ya sea en la administración pública o privada, se deben mutuamente, independiente y sin perjuicio de aquella relación, el respeto y el trato impuesto por su condición de colegas.(INEXEQUIBLE)', 
+            'idarticulo' => '60'),
+        array(
+            'iditem' => '289',
+            'descripcion' => 'a) Participar en el proceso de evaluación de tareas profesionales de colegas, con quienes se tuviese vinculación de parentesco, hasta el grado fijado por las normas de contratación pública, o vinculación societaria de hecho o de derecho. La violación de esta norma se imputará también al profesional que acepte tal evaluación;', 
+            'idarticulo' => '61'),
+        array(
+            'iditem' => '290',
+            'descripcion' => 'b) Los profesionales superiores jerárquicos, deben abstenerse de proceder en forma que desprestigie o menoscabe a los profesionales que ocupen cargos subalternos al suyo;(INEXEQUIBLE)', 
+            'idarticulo' => '61'),
+        array(
+            'iditem' => '291',
+            'descripcion' => 'c) Cometer, permitir o contribuir a que se cometan actos de injusticia en perjuicio de otro profesional, tales como destitución, reemplazo, disminución de categoría, aplicación de penas disciplinarias, sin causa demostrada y justa.(INEXEQUIBLE)', 
+            'idarticulo' => '61'),
+        array(
+            'iditem' => '292',
+            'descripcion' => 'a) Los profesionales que se dispongan a participar en un concurso o licitación por invitación pública o privada y consideren que las bases pudieren transgredir las normas de la ética profesional, deberán denunciar ante el Consejo Profesional respectivo la existencia de dicha transgresión;', 
+            'idarticulo' => '62'),
+        array(
+            'iditem' => '293',
+            'descripcion' => 'b) Los profesionales que participen en un concurso o licitación están obligados a observar la más estricta disciplina y el máximo respeto hacia los miembros del jurado o junta de selección, los funcionarios y los demás participantes.(INEXEQUIBLE)', 
+            'idarticulo' => '62'),
+        array(
+            'iditem' => '294',
+            'descripcion' => 'a) Los profesionales que hayan actuado como asesores de la parte contratante en un concurso o licitación deberán abstenerse de intervenir directa o indirectamente en las tareas profesionales requeridas para el desarrollo del trabajo que dio lugar al mismo, salvo que su intervención estuviese establecida en las bases del concurso o licitación.', 
+            'idarticulo' => '63'),
+        array(
+            'iditem' => '295',
+            'descripcion' => 'a) Los profesionales que actúen simultáneamente como representantes técnicos o asesores de más de una empresa que desarrolle idénticas actividades y en un mismo tema, sin expreso consentimiento y autorización de las mismas para tal actuación;', 
+            'idarticulo' => '64'),
+        array(
+            'iditem' => '296',
+            'descripcion' => 'b) Los profesionales que en ejercicio de sus actividades públicas o privadas hubiesen intervenido en determinado asunto, no podrán luego actuar o asesorar directa o indirectamente a la parte contraria en la misma cuestión;', 
+            'idarticulo' => '64'),
+        array(
+            'iditem' => '297',
+            'descripcion' => 'c) Los profesionales no deben intervenir como peritos o actuar en cuestiones que comprendan las inhabilidades e incompatibilidades generales de ley.', 
+            'idarticulo' => '64'),
+        array(
+            'iditem' => '298',
+            'descripcion' => 'a) Amonestación escrita;', 
+            'idarticulo' => '66'),
+        array(
+            'iditem' => '299',
+            'descripcion' => 'b) Suspensión en el ejercicio de la profesión hasta por cinco (5) años;', 
+            'idarticulo' => '66'),
+        array(
+            'iditem' => '300',
+            'descripcion' => 'c) Cancelación de la matrícula profesional, del certificado de inscripción profesional o del certificado de matrícula profesional.', 
+            'idarticulo' => '66'),
+        array(
+            'iditem' => '301',
+            'descripcion' => 'a) Las faltas calificadas por el Consejo Regional o Seccional como leves, siempre y cuando el profesional disciplinado no registre antecedentes disciplinarios, darán lugar a la aplicación de la sanción de amonestación escrita;', 
+            'idarticulo' => '67'),
+        array(
+            'iditem' => '302',
+            'descripcion' => 'b) Las faltas calificadas por el Consejo Regional o Seccional como leves, cuando el profesional disciplinado registre antecedentes disciplinarios, darán lugar a la aplicación de la sanción de suspensión de la matrícula profesional hasta por el término de seis (6) meses;', 
+            'idarticulo' => '67'),
+        array(
+            'iditem' => '303',
+            'descripcion' => 'c) Las faltas calificadas por el Consejo Regional o Seccional como graves, siempre y cuando el profesional disciplinado no registre antecedentes disciplinarios, darán lugar a la aplicación de la sanción de suspensión de la matrícula profesional por un término de seis (6) meses a dos (2) años;', 
+            'idarticulo' => '67'),
+        array(
+            'iditem' => '304',
+            'descripcion' => 'd) Las faltas calificadas por el Consejo Regional o Seccional como graves, cuando el profesional disciplinado registre antecedentes disciplinarios, darán lugar a la aplicación de la sanción de suspensión de la matrícula profesional por un término de dos (2) a cinco (5) años;', 
+            'idarticulo' => '67'),
+        array(
+            'iditem' => '305',
+            'descripcion' => 'e) Las faltas calificadas por el Consejo Regional o Seccional como gravísimas, siempre darán lugar a la aplicación de la sanción de cancelación de la matrícula profesional.', 
+            'idarticulo' => '67'),
+        array(
+            'iditem' => '306',
+            'descripcion' => 'a) La conducta o el hecho debe haber sido cometido por un profesional de la ingeniería, de alguna de sus profesiones afines o de alguna de sus profesiones auxiliares, debidamente matriculado;', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '307',
+            'descripcion' => 'b) La conducta o el hecho debe ser intencional o culposo;', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '308',
+            'descripcion' => 'c) El hecho debe haber sido cometido en ejercicio de la profesión o de actividades conexas o relacionadas con esta;', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '309',
+            'descripcion' => 'd) La conducta debe ser violatoria de deberes, prohibiciones, inhabilidades o incompatibilidades inherentes a la profesión de la ingeniería, de alguna de sus profesiones afines o de alguna de sus profesiones auxiliares;', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '310',
+            'descripcion' => 'e) La conducta debe ser apreciable objetivamente y procesalmente debe estar probada;', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '311',
+            'descripcion' => 'f) La sanción disciplinaria debe ser la consecuencia lógica de un debido proceso, que se enmarque dentro de los postulados del artículo 29 de la Constitución Política y específicamente, del régimen disciplinario establecido en la presente ley.', 
+            'idarticulo' => '69'),
+        array(
+            'iditem' => '312',
+            'descripcion' => 'a) El grado de culpabilidad;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '313',
+            'descripcion' => 'b) El grado de perturbación a terceros o a la sociedad;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '314',
+            'descripcion' => 'c) La falta de consideración con sus clientes, patronos, subalternos y, en general, con todas las personas a las que pudiera afectar el profesional disciplinado con su conducta;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '315',
+            'descripcion' => 'd) La reiteración en la conducta;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '316',
+            'descripcion' => 'e) La jerarquía y mando que el profesional disciplinado tenga dentro de su entidad, sociedad, la persona jurídica a la que pertenece o representa, etc.;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '317',
+            'descripcion' => 'f) La naturaleza de la falta y sus efectos, según la trascendencia social de la misma, el mal ejemplo dado, la complicidad con otros profesionales y el perjuicio causado;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '318',
+            'descripcion' => 'g) Las modalidades o circunstancias de la falta, teniendo en cuenta el grado de preparación, el grado de participación en la comisión de la misma y el aprovechamiento de la confianza depositada en el profesional disciplinado;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '319',
+            'descripcion' => 'h) Los motivos determinantes, según se haya procedido por causas innobles o fútiles, o por nobles y altruistas;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '320',
+            'descripcion' => 'i) El haber sido inducido por un superior a cometerla;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '321',
+            'descripcion' => 'j) El confesar la falta antes de la formulación de cargos, haciéndose responsable de los perjuicios causados;', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '322',
+            'descripcion' => 'k) Procurar, por iniciativa propia, resarcir el daño o compensar el perjuicio causado, antes de que le sea impuesta la sanción.', 
+            'idarticulo' => '71'),
+        array(
+            'iditem' => '323',
+            'descripcion' => 'a) Derivar, de manera directa o por interpuesta persona, indebido o fraudulento provecho patrimonial en ejercicio de la profesión, con consecuencias graves para la parte afectada;', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '324',
+            'descripcion' => 'b) Obstaculizar, en forma grave, las investigaciones que realice el Consejo Profesional de Ingeniería respectivo;', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '325',
+            'descripcion' => 'c) El abandono injustificado de los encargos o compromisos profesionales, cuando con tal conducta causen grave detrimento al patrimonio económico del cliente o se afecte, de la misma forma, el patrimonio público;', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '326',
+            'descripcion' => 'd) La utilización fraudulenta de las hojas de vida de sus colegas para participar en concursos, licitaciones públicas, lo mismo que para suscribir los respectivos contratos;', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '327',
+            'descripcion' => 'e) Incurrir en algún delito que atente contra sus clientes, colegas o autoridades de la República, siempre y cuando la conducta punible comprenda el ejercicio de la ingeniería o de alguna de sus profesiones auxiliares;', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '328',
+            'descripcion' => 'f) Cualquier violación gravísima, según el criterio del Consejo respectivo, del régimen de deberes, obligaciones y prohibiciones que establecen el Código Ética y la presente ley.', 
+            'idarticulo' => '72'),
+        array(
+            'iditem' => '329',
+            'descripcion' => 'a) Por fuerza mayor o caso fortuito;', 
+            'idarticulo' => '74'),
+        array(
+            'iditem' => '330',
+            'descripcion' => 'b) En estricto cumplimiento de un deber legal;', 
+            'idarticulo' => '74'),
+        array(
+            'iditem' => '331',
+            'descripcion' => 'c) En cumplimiento de orden legítima de autoridad competente emitida con las formalidades legales.', 
+            'idarticulo' => '74')
+
+        );
 
      /**
      * Seed the application's database.
@@ -575,11 +1108,11 @@ class DatabaseSeeder extends Seeder
         //self::seedCapitulos();
         //$this->command->info('Tabla capitulos inicializada con datos!');
 
-        self::seedArticulos();
-        $this->command->info('Tabla articulos inicializada con datos!');
+        //self::seedArticulos();
+        //$this->command->info('Tabla articulos inicializada con datos!');
 
-        //self::seedItems();
-        //$this->command->info('Tabla items inicializada con datos!');
+        self::seedItems();
+        $this->command->info('Tabla items inicializada con datos!');
 
         //self::seedParagrafos();
         //$this->command->info('Tabla paragrafos inicializada con datos!');
@@ -658,7 +1191,16 @@ class DatabaseSeeder extends Seeder
         } 
     }
 
-    private function seedItems(){}
+    private function seedItems(){
+        DB::table('items')->delete();
+        foreach( $this->itemArticulo as $item) {
+            $p = new Items;
+            $p->idItem= $item['iditem'];
+            $p->descripcion = $item['descripcion'];
+            $p->idArticulo = $item['idarticulo'];
+            $p->save();
+        } 
+    }
 
     private function seedParagrafos(){}
 
