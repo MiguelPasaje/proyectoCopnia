@@ -30,7 +30,7 @@
     margin-left:30px;
   }
 
-  .parrafo{
+  .desc{
     color:rgb(0, 0, 0) !important;
     margin:30px;
     
@@ -46,29 +46,34 @@
 @include('partials.sideMenu')
 
   <div class="contenedor">
+
+    <h1 class="titulo1">
+      ley {{-- {{ $titulo['idley'] }} --}}
+    </h1> 
+
+    <hr>
     
     
-    @foreach ($titulo as $titulo)
-      <h1 class="titulo1">
-        LEY 
-      </h1>
+    @foreach ($titulo as $titulo)    
 
-      <hr>
 
-        
-
+    {{-- titulos --}}
       <h2 class="titulo2">
         {{ $titulo['titulo'] }}
       </h2>
 
-      <div class="parrafo">
+      <div class="desc">
         <h4>
-          {{ $titulo['descripcion'] }}
+          {{ $titulo['descripcion'] }}          
         </h4>
-      </div>      
+      </div>
+      
+      {{-- capitulos --}}
+
+      
           
             
-
+      {{--  --}}
       <hr>
     @endforeach
 
