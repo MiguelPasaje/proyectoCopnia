@@ -35,17 +35,23 @@ a:hover{
 
 #sidebar-content{
     min-height:100vh;
+    
 
+}
+
+.logo h4{
+    font-size: 18px;
 }
 
 #sidebar-content .logo{
     padding: .85rem 1.25rem;
+    
 
 }
 
 #sidebar-content .menu{
     width:18rem;
-    
+        
 }
 
 /*posisicion del icono search*/
@@ -62,10 +68,14 @@ a:hover{
 
 .menuSide{
     position: fixed;
+    left: 0px;
+    top:103px;
     width: 60px;
     height:100%;
     transition:0.5s;
     overflow:hidden;
+    /* margin-top:-0.9%;
+    margin-left:-0.8%; */
 }
 
 
@@ -114,4 +124,12 @@ i.lateral:hover{
 
  li .navhov:hover { 
     color:#ff0 !important;
+}
+
+@media(max-width:1000px){
+    #search{
+        
+        width: 100%;
+        
+    }
 }
