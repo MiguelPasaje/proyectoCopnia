@@ -54,7 +54,7 @@
 
         @if( true || Auth::check() )
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!--ul class="navbar-nav mr-auto">
+               {{--  <!--ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/catalog')}}">
                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
@@ -66,12 +66,12 @@
                             <span>&#10010</span> Nueva película
                         </a>
                     </li>
-                </ul-->
+                </ul--> --}}
 
-                <ul class="navbar-nav ml-auto">
-                <li class="nav-item{{--  {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}} --}}">
-                        <a class="navhov nav-link" href="{{url('/')}}">
-                            <i class="fas fa-home"></i>
+                <ul class="navbar-nav ml-auto" >
+                <li  class="nav-item{{--  {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}} --}}">
+                        <a class="navhov nav-link"  href="{{url('/')}}">
+                            <i class="fas fa-home"  ></i>
                             Home
                         </a>
                     </li>
@@ -85,28 +85,19 @@
                             <i class="exclamation exclamation fas fa-exclamation"></i> About                            
                         </a>
                     </li>
+
                     {{-- search navbar --}}
-                    <form action="" class="form-inline position-relative my-2 my-lg-0 ">
-                        
-                        
-                        <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar">
-                        
+                    <form action="" class="form-inline position-relative my-2 my-lg-0 ">                                          
+                        <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar">                        
                         <span class="  ico-search ">
                             <i class="fas fa-search mr-2"></i>
-                        </span>
-                            
-                        
+                        </span>                        
                     </form>
 
-                    <div class="container">           
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <!-- Left Side Of Navbar -->
-                            <ul class="navbar-nav mr-auto">
-                    
-                            </ul>
-                    
-                            <!-- Right Side Of Navbar -->
-                            <ul class="navbar-nav ml-auto">
+                    {{-- mostrar user y logout --}}
+
+                           <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav mr-auto" >
                                 <!-- Authentication Links -->
                                 @guest
                                     @if (Route::has('login'))
@@ -121,8 +112,8 @@
                                         </li>
                                     @endif
                                 @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <li class="nav-item dropdown" >
+                                        <a  id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }} 
                                         </a>
         
@@ -144,8 +135,8 @@
                                     </li>
                                 @endguest
                             </ul>
-                        </div>
-                    </div> 
+                        
+                    
 
 
 
