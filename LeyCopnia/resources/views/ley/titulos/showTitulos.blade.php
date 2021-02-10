@@ -48,29 +48,29 @@
   <div class="contenedor">
     
     
-     
+    @foreach ($titulo as $titulo)
       <h1 class="titulo1">
-        LEY {{--  --}}
+        LEY 
       </h1>
 
       <hr>
 
-    {{--  @foreach ($arrayTitulos as $key => $titulos ) --}}
+        
 
       <h2 class="titulo2">
-        Título
+        {{ $titulo['titulo'] }}
       </h2>
 
-<div class="parrafo">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nobis eius vero repudiandae ea corrupti aperiam porro aliquid inventore, rem temporibus itaque, sunt laudantium iste fugit blanditiis iure expedita laborum.</p>
-</div>      
-                        {{-- <h5 class="card-title">{{$titulos['titulo']}}</h5>
-                        <p class="card-text pb-2">{{$ley['desc']}}</p>
-                        <a href="{{url('/leyConsulta/'.$key)}}" class="btn btn-primary mx-3">Consultar</a> --}}
+      <div class="parrafo">
+        <h4>
+          {{ $titulo['descripcion'] }}
+        </h4>
+      </div>      
+          
             
 
       <hr>
-      {{--  @endforeach --}}
+    @endforeach
 
       
     </div>
