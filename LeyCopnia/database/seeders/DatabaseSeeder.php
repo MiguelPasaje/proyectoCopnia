@@ -11,7 +11,7 @@ use App\Models\Titulo;
 use App\Models\Capitulo;
 use App\Models\Articulo;
 use App\Models\Items;
-use App\Models\Paragrafo;
+use App\Models\Paragrafos;
 
 class DatabaseSeeder extends Seeder
 {
@@ -1217,11 +1217,11 @@ class DatabaseSeeder extends Seeder
         //self::seedArticulos();
         //$this->command->info('Tabla articulos inicializada con datos!');
 
-        self::seedItems();
-        $this->command->info('Tabla items inicializada con datos!');
+        //self::seedItems();
+        //$this->command->info('Tabla items inicializada con datos!');
 
-        //self::seedParagrafos();
-        //$this->command->info('Tabla paragrafos inicializada con datos!');
+        self::seedParagrafos();
+        $this->command->info('Tabla paragrafos inicializada con datos!');
 
         //self::seedNotas();
         //$this->command->info('Tabla notas inicializada con datos!');
@@ -1311,7 +1311,7 @@ class DatabaseSeeder extends Seeder
     private function seedParagrafos(){
         DB::table('paragrafos')->delete();
         foreach( $this->paragrafos as $paragrafo) {
-            $p = new Paragrafo;
+            $p = new Paragrafos;
             $p->idParagrafo= $paragrafo['idparagrafo'];
             $p->descripcion= $paragrafo['descripcion'];
             $p->idArticulo= $paragrafo['idarticulo'];
