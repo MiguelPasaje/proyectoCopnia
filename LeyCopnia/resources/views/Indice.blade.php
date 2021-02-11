@@ -103,7 +103,7 @@
                             <div class="col-md-7">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$ley->ley}}</h5>
-                                    <p class="card-text pb-2">{{$ley->descripcion}}</p>
+                                    <p class="card-text pb-2">{{$ley->leyDes}}</p>
                                     <a href="{{url('/ley/titulos/'. $ley->idLey)}}" class="btn btn-primary mx-3">Consultar</a>
                                 </div>
                             </div>
