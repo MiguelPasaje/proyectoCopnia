@@ -14,10 +14,14 @@ class CreateCapitulosTable extends Migration
     public function up()
     {
         Schema::create('Capitulos', function (Blueprint $table) {
-            $table->integer('idCapitulo');
+            $table->integer('idCapitulo')->primary();
             $table->string('capitulo',45);
             $table->string('descripcion',100);
-            $table->integer('idTitulo');
+            $table->integer('idTitulo')->unsigned();
+            $table->foreign('idTituloo')
+                ->references('idTitulo')
+                ->on('Titulos')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +33,9 @@ class CreateCapitulosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Capitulos');
+        Schema::dropIfExists('Capitulos',function(Blueprint $table){
+            $table->dropForeign('Capitulos_idTitulo_foreign');
+        });
+        
     }
 }

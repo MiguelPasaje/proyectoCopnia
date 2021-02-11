@@ -14,9 +14,13 @@ class CreateParagrafosTable extends Migration
     public function up()
     {
         Schema::create('Paragrafos', function (Blueprint $table) {
-            $table->integer("idParagrafo");
+            $table->integer("idParagrafo")->primary();
             $table->text('descripcion');
-            $table->integer('idArticulo');
+            $table->integer('idArticulo')->unsigned();
+            $table->foreign('idArticulo')
+                ->references('idArticulos')
+                ->on('Articulos')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +32,9 @@ class CreateParagrafosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Paragrafos');
+        Schema::dropIfExists('Paragrafos',function (Blueprint $table){
+            $table->droForeign('Paragrafos_idArticulo_foreign');
+        });
+        
     }
 }

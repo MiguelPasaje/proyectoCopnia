@@ -14,9 +14,13 @@ class CreateItemarticuloTable extends Migration
     public function up()
     {
         Schema::create('Items', function (Blueprint $table) {
-            $table->integer('idItem');
+            $table->integer('idItem')->primary();
             $table->text('descripcion');
-            $table->integer('idArticulo');
+            $table->integer('idArticulo')->unsigned();
+            $table->foreign('idArticulo')
+                ->references('idArticulo')
+                ->on('Articulos')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +32,9 @@ class CreateItemarticuloTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Items');
+        Schema::dropIfExists('Items',function (Blueprint $table){
+            $table->droForeign('Items_idArticulo_foreign');
+        });
+        
     }
 }
