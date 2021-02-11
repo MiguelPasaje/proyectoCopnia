@@ -14,10 +14,14 @@ class CreateArticulosTable extends Migration
     public function up()
     {
         Schema::create('Articulos', function (Blueprint $table) {
-            $table->integer('idArticulo');
+            $table->increments('idArticulo');
             $table->text('articulo');
             $table->text('descripcion');
-            $table->integer('idCapitulo');
+            $table->integer('idCapitulo')->unsigned();
+            $table->foreign('idCapitulo')
+                ->references('idCapitulo')
+                ->on('Capitulos')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +33,9 @@ class CreateArticulosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Articulos');
+        Schema::dropIfExists('Articulos',function(Blueprint $table){
+            $table->dropForeign('Articulos_idCapitulo_foreign');
+        });
+        
     }
 }

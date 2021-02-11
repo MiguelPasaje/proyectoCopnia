@@ -14,10 +14,18 @@ class CreateNotasTable extends Migration
     public function up()
     {
         Schema::create('Notas', function (Blueprint $table) {
-            $table->integer('idNota');
+            $table->increments('idNota');
             $table->text('nota');
-            $table->integer('idItem');
-            $table->integer('idArticulo');
+            $table->integer('idItem')->nullable()->unsigned();
+            $table->foreign('idItem')
+                ->references('idItem')
+                ->on('Items')
+                ->onDelete('cascade');
+            $table->integer('idArticulo')->nullable()->unsigned();
+            $table->foreign('idArticulo')
+                ->references('idArticulo')
+                ->on('Articulos')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +37,10 @@ class CreateNotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Notas');
+        Schema::dropIfExists('Notas',function (Blueprint $table){
+            $table->dropForeign('Notas_idArticulo_foreign');
+            $table->dropForeign('Notas_idItem_foreign');
+        });
+        
     }
 }
