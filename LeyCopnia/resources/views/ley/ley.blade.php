@@ -6,7 +6,9 @@
 
 @section('content')
 <div class="container">
-    vista Ley
+    @foreach ($capitulo as $capitulo) 
+      <h1>{{ $capitulo['capitulo']}}</h1>
+      @endforeach
 
 </div>
 

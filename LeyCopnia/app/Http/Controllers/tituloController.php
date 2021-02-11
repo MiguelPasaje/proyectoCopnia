@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Models\titulo;
 
+use App\Models\Capitulo;
+
 class tituloController extends Controller
 {
     public function getLey($id) {
 
         //return view('ley/titulos/showTitulos',array('id'=>$id));
         $titulo = titulo::all();
-        return view('ley.titulos.showTitulos',compact('titulo'));
+        $capitulo = Capitulo::all();
+        return view('ley.titulos.showTitulos',compact('titulo','capitulo'));
 
     }
 

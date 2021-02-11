@@ -52,6 +52,10 @@
     </h1> 
 
     <hr>
+
+    {{-- @foreach ($capitulo as $capitulo) 
+      <h1>{{ $capitulo['capitulo']}}</h1>
+    @endforeach  --}}
     
     
     @foreach ($titulo as $titulo)    
@@ -70,7 +74,9 @@
       
       {{-- capitulos --}}
 
-      
+      @foreach ($capitulo as $cap) 
+      <h1>{{ $cap['capitulo']}}</h1>
+      @endforeach  
           
             
       {{--  --}}

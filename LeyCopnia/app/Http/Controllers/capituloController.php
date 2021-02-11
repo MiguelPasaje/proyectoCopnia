@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Capitulo;
 
 class capituloController extends Controller
 {
     public function getIndex() {
-        return view('capitulos.capIndex');
+        $capitulo = Capitulo::all();
+        return view('ley.ley',compact('capitulo'));
+        //return view('capitulos.capIndex');
     }
 
     public function getCreate(){
-        return view('capitulos.capCreate');
+        return view('ley.capitulos.capCreate');
     }
 
     public function getShow($id){
@@ -19,7 +22,7 @@ class capituloController extends Controller
     }
     
     public function getEdit($id_cap){
-        return view('capitulos.capEdit');
+        return view('ley.capitulos.capEdit');
     }
     
     public function postCreate(Request $request){

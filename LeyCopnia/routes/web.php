@@ -24,6 +24,7 @@ Route::get('/leyes', [CatalogController::class,'getIndex'])->name('indice');
 Route::get('/ley/titulos/{id}', [tituloController::class,'getLey'])->name('homLey');
 Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
 
+Route::get('/ley', [capituloController::class,'getIndex']);
 
 
 
