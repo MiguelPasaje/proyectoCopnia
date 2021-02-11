@@ -19,20 +19,27 @@ use App\Http\Controllers\CatalogController;
 
 
 Route::get('/', [HomeController::class,'getHome'])->name('home');
+
+/*donde se muestran todas las leyes*/
 Route::get('/leyes', [CatalogController::class,'getIndex'])->name('indice');
 
+/*donde se muestra toda la ley*/
 Route::get('/ley/titulos/{id}', [tituloController::class,'getLey'])->name('homLey');
-Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
-
-Route::get('/ley', [capituloController::class,'getIndex']);
 
 
 
-Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
-Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
-Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
-Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');
+
+
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
+    Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyEdit');
+    Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
+    Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
+    Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
+    Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');
+// ...
+});
