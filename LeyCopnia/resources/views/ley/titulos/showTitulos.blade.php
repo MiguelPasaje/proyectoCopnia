@@ -30,6 +30,10 @@
     margin-left:30px;
   }
 
+  h4.titulo4{
+    margin-left:30px;
+  }
+
   .desc{
     color:rgb(0, 0, 0) !important;
     margin:30px;
@@ -46,32 +50,34 @@
 @include('partials.sideMenu')
 
   <div class="contenedor">
-    
-    @foreach($ley as $l)
-      <h1 class="titulo1">
-        {{ $l->ley }}
-      </h1> 
-    @endforeach
+
+    <h1 class="titulo1">
+      {{ $ley->ley }}
+    </h1> 
     
 
     <hr>
     
-      @foreach ($contenido as $campo)    
+      @foreach ($titulos as $titulo)    
 
 
-        {{-- titulos --}}
+        {{----------------titulos-------------}}
           <h2 class="titulo2">
-            {{ $campo->titulo }}
+            {{ $titulo->titulo }}
           </h2>
 
-          <h4>
-            {{ $campo->titDes }}
+          <h4 class="titulo4">
+            {{ $titulo->titDes }}
           </h4>
-
+        {{---------------capitulos-------------}}
           <div class="desc">    
-            {{-- capitulos --}}
-            <h5>{{ $campo->capitulo}}</h5>
-            <h4>{{ $campo->capDes}}</h4>
+            @foreach($capitulos as $cap)
+              @if($cap->idTitulo === $titulo->idTitulo)
+                <h5>{{ $cap->capitulo}}</h5>
+                <h4>{{ $cap->capDes}}</h4>
+              @endif
+            @endforeach
+
           </div>        
                 
           {{--  --}}

@@ -20,15 +20,16 @@ class tituloController extends Controller
         //$capitulos = Capitulo::all();
         //$titulos = DB::table('Titulos')->where('idLey','100')->get();
 
-        $ley = DB::table('Leyes')->where('idLey',$id)->get();
-        $contenido = DB::table('Titulos')
-            ->join('Capitulos','Titulos.idTitulo','=','Capitulos.idTitulo')
+        $ley = Ley::findOrFail($id);
+        $titulos = DB::table('Titulos')->where('idLey',$id)->get();
+        $capitulos = DB::table('Titulos')
+            ->rightJoin('Capitulos','Titulos.idTitulo','=','Capitulos.idTitulo')
             ->where('idLey',$id)
             ->distinct()
             ->get();
         
         //return view('ley.titulos.showTitulos',compact('titulos','capitulos'));
-        return view('ley.titulos.showTitulos',compact('ley','contenido'));
+        return view('ley.titulos.showTitulos',compact('ley','titulos','capitulos'));
 
     }
 
