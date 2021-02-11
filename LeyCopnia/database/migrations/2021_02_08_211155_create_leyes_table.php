@@ -13,7 +13,7 @@ class CreateLeyesTable extends Migration
      */
     public function up()
     {
-        Schema::create('leyes', function (Blueprint $table) {
+        Schema::create('Leyes', function (Blueprint $table) {
             $table->increments('idLey');
             $table->string('ley')->unique();
             $table->string('imagen',100);

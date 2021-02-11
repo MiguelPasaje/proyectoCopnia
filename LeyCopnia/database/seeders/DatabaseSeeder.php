@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 
 use DB;
 use App\Models\User;
-use App\Models\leyes;
+use App\Models\Ley;
 use App\Models\Titulo;
 use App\Models\Capitulo;
 use App\Models\Articulo;
-use App\Models\Items;
-use App\Models\Paragrafos;
-use App\Models\Notas;
+use App\Models\Item;
+use App\Models\Paragrafo;
+use App\Models\Nota;
 
 class DatabaseSeeder extends Seeder
 {
@@ -1401,7 +1401,7 @@ class DatabaseSeeder extends Seeder
     private function seedLeyes(){
         DB::table('leyes')->delete();
         foreach( $this->arrayLeyes as $leyes ) {
-            $p = new leyes;
+            $p = new Ley;
             $p->idLey = $leyes['idley'];
             $p->Ley = $leyes['ley'];
             $p->imagen = $leyes['imagen'];
@@ -1451,7 +1451,7 @@ class DatabaseSeeder extends Seeder
     private function seedItems(){   
         DB::table('items')->delete();
         foreach( $this->itemArticulo as $item) {
-            $p = new Items;
+            $p = new Item;
             $p->idItem= $item['iditem'];
             $p->descripcion = $item['descripcion'];
             $p->idArticulo = $item['idarticulo'];
@@ -1462,7 +1462,7 @@ class DatabaseSeeder extends Seeder
     private function seedParagrafos(){
         DB::table('paragrafos')->delete();
         foreach( $this->paragrafos as $paragrafo) {
-            $p = new Paragrafos;
+            $p = new Paragrafo;
             $p->idParagrafo= $paragrafo['idparagrafo'];
             $p->descripcion= $paragrafo['descripcion'];
             $p->idArticulo= $paragrafo['idarticulo'];
@@ -1473,7 +1473,7 @@ class DatabaseSeeder extends Seeder
     private function seedNotas(){
         DB::table('notas')->delete();
         foreach( $this->notas as $nota) {
-            $p = new Notas;
+            $p = new Nota;
             $p->idNota= $nota['idnotas'];
             $p->nota= $nota['nota'];
             $p->idItem= $nota['iditem'];
