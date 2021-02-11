@@ -34,6 +34,10 @@
     margin-left:30px;
   }
 
+  p.parrafo{
+    margin-left:35px;
+  }
+
   .desc{
     color:rgb(0, 0, 0) !important;
     margin:30px;
@@ -61,20 +65,25 @@
       @foreach ($titulos as $titulo)    
 
 
-        {{----------------titulos-------------}}
-          <h2 class="titulo2">
-            {{ $titulo->titulo }}
-          </h2>
-
-          <h4 class="titulo4">
-            {{ $titulo->titDes }}
-          </h4>
-        {{---------------capitulos-------------}}
-          <div class="desc">    
+        {{---------titulos desplegadores-------------}}
+            <p>
+              <!-- <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> -->
+              <a data-bs-toggle="collapse" href="{{url('#collapseCapitulos'. $titulo->idTitulo)}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <h2 class="titulo2">
+                  {{ $titulo->titulo }}
+                </h2>
+              </a>
+              <h4 class="titulo4">
+                {{ $titulo->titDes }}
+              </h4>
+            </p>
+          
+        {{---------capitulos desplegables------------}}
+          <div class="collapse desc" id={{'collapseCapitulos'.$titulo->idTitulo}}>    
             @foreach($capitulos as $cap)
               @if($cap->idTitulo === $titulo->idTitulo)
-                <h5>{{ $cap->capitulo}}</h5>
-                <h4>{{ $cap->capDes}}</h4>
+                <h4 class="titulo4">{{ $cap->capitulo}}</h4>
+                <p class="parrafo">{{ $cap->capDes}}</p>
               @endif
             @endforeach
 
