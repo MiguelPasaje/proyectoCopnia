@@ -1405,7 +1405,7 @@ class DatabaseSeeder extends Seeder
             $p->idLey = $leyes['idley'];
             $p->Ley = $leyes['ley'];
             $p->imagen = $leyes['imagen'];
-            $p->descripcion = $leyes['desc'];
+            $p->leyDes = $leyes['desc'];
             $p->save();
       }
 
@@ -1418,7 +1418,7 @@ class DatabaseSeeder extends Seeder
             $p = new Titulo;
             $p->idTitulo = $titulo['idtitulo'];
             $p->titulo = $titulo['nombre'];
-            $p->descripcion = $titulo['descripcion'];
+            $p->titDes = $titulo['descripcion'];
             $p->idLey = $titulo['idley'];
             $p->save();
         } 
@@ -1430,7 +1430,7 @@ class DatabaseSeeder extends Seeder
             $p = new Capitulo;
             $p->idCapitulo= $capitulo['idcapitulo'];
             $p->capitulo = $capitulo['nombre'];
-            $p->descripcion = $capitulo['descripcion'];
+            $p->capDes = $capitulo['descripcion'];
             $p->idTitulo = $capitulo['idtitulo'];
             $p->save();
         } 
@@ -1442,7 +1442,7 @@ class DatabaseSeeder extends Seeder
             $p = new Articulo;
             $p->idArticulo= $articulo['idarticulo'];
             $p->articulo = $articulo['nombre'];
-            $p->descripcion = $articulo['descripcion'];
+            $p->artDes = $articulo['descripcion'];
             $p->idCapitulo = $articulo['idcapitulo'];
             $p->save();
         } 
@@ -1453,7 +1453,7 @@ class DatabaseSeeder extends Seeder
         foreach( $this->itemArticulo as $item) {
             $p = new Item;
             $p->idItem= $item['iditem'];
-            $p->descripcion = $item['descripcion'];
+            $p->iteDes = $item['descripcion'];
             $p->idArticulo = $item['idarticulo'];
             $p->save();
         } 
@@ -1464,7 +1464,7 @@ class DatabaseSeeder extends Seeder
         foreach( $this->paragrafos as $paragrafo) {
             $p = new Paragrafo;
             $p->idParagrafo= $paragrafo['idparagrafo'];
-            $p->descripcion= $paragrafo['descripcion'];
+            $p->parDes= $paragrafo['descripcion'];
             $p->idArticulo= $paragrafo['idarticulo'];
             $p->save();
         } 

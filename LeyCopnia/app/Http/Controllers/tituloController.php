@@ -4,18 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\titulo;
-
+use App\Models\Titulo;
 use App\Models\Capitulo;
+use App\Models\Ley;
+use DB;
+
+
 
 class tituloController extends Controller
 {
     public function getLey($id) {
 
         //return view('ley/titulos/showTitulos',array('id'=>$id));
-        $titulo = titulo::all();
-        $capitulo = Capitulo::all();
-        return view('ley.titulos.showTitulos',compact('titulo','capitulo'));
+        //$titulo = Titulo::all();
+        //$capitulos = Capitulo::all();
+        //$titulos = DB::table('Titulos')->where('idLey','100')->get();
+
+        $ley = DB::table('Leyes')->where('idLey',$id)->get();
+        $contenido = DB::table('Titulos')
+            ->join('Capitulos','Titulos.idTitulo','=','Capitulos.idTitulo')
+            ->where('idLey',$id)
+            ->distinct()
+            ->get();
+        
+        //return view('ley.titulos.showTitulos',compact('titulos','capitulos'));
+        return view('ley.titulos.showTitulos',compact('ley','contenido'));
 
     }
 

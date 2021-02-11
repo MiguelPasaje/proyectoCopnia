@@ -17,7 +17,7 @@ class CreateLeyesTable extends Migration
             $table->increments('idLey');
             $table->string('ley')->unique();
             $table->string('imagen',100);
-            $table->text('descripcion');
+            $table->text('leyDes');
             $table->timestamps();
         });
     }

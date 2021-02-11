@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Paragrafo extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'idParagrafo';
 }

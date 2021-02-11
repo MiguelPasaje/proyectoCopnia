@@ -9,4 +9,5 @@ class Ley extends Model
 {
     use HasFactory;
     protected $table = 'leyes';
+    protected $primaryKey = 'idLey';
 }

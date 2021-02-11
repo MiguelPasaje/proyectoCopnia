@@ -46,42 +46,37 @@
 @include('partials.sideMenu')
 
   <div class="contenedor">
-
-    <h1 class="titulo1">
-      ley {{-- {{ $titulo['idley'] }} --}}
-    </h1> 
+    
+    @foreach($ley as $l)
+      <h1 class="titulo1">
+        {{ $l->ley }}
+      </h1> 
+    @endforeach
+    
 
     <hr>
-
-    {{-- @foreach ($capitulo as $capitulo) 
-      <h1>{{ $capitulo['capitulo']}}</h1>
-    @endforeach  --}}
     
-    
-    @foreach ($titulo as $titulo)    
+      @foreach ($contenido as $campo)    
 
 
-    {{-- titulos --}}
-      <h2 class="titulo2">
-        {{ $titulo['titulo'] }}
-      </h2>
+        {{-- titulos --}}
+          <h2 class="titulo2">
+            {{ $campo->titulo }}
+          </h2>
 
-      <div class="desc">
-        <h4>
-          {{ $titulo['descripcion'] }}          
-        </h4>
-      </div>
-      
-      {{-- capitulos --}}
+          <h4>
+            {{ $campo->titDes }}
+          </h4>
 
-      @foreach ($capitulo as $cap) 
-      <h1>{{ $cap['capitulo']}}</h1>
-      @endforeach  
-          
-            
-      {{--  --}}
-      <hr>
-    @endforeach
+          <div class="desc">    
+            {{-- capitulos --}}
+            <h5>{{ $campo->capitulo}}</h5>
+            <h4>{{ $campo->capDes}}</h4>
+          </div>        
+                
+          {{--  --}}
+          <hr>
+      @endforeach
 
       
     </div>
