@@ -19,6 +19,8 @@
     {{-- MY css --}}
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/estiloFooter.css')}}">
+    
 
 
     {{-- fonts.google --}}
@@ -36,6 +38,12 @@
     <div class="container-fluid pt-3">
       @yield('content')
     </div>
+
+
+
+    {{-- footer --}}
+
+    @include('partials.footer')
 
     <!-- Optional JavaScript; choose one of the two! -->
 
