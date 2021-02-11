@@ -14,10 +14,10 @@ class CreateArticulosTable extends Migration
     public function up()
     {
         Schema::create('Articulos', function (Blueprint $table) {
-            $table->integer('idArticulo')->primary();
+            $table->increments('idArticulo');
             $table->text('articulo');
             $table->text('descripcion');
-            $table->integer('idCapitulo');
+            $table->integer('idCapitulo')->unsigned();
             $table->foreign('idCapitulo')
                 ->references('idCapitulo')
                 ->on('Capitulos')

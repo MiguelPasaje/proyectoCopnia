@@ -14,11 +14,11 @@ class CreateCapitulosTable extends Migration
     public function up()
     {
         Schema::create('Capitulos', function (Blueprint $table) {
-            $table->integer('idCapitulo')->primary();
+            $table->increments('idCapitulo');
             $table->string('capitulo',45);
             $table->string('descripcion',100);
             $table->integer('idTitulo')->unsigned();
-            $table->foreign('idTituloo')
+            $table->foreign('idTitulo')
                 ->references('idTitulo')
                 ->on('Titulos')
                 ->onDelete('cascade');

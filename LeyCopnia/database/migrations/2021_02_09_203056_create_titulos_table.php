@@ -14,7 +14,7 @@ class CreateTitulosTable extends Migration
     public function up()
     {
         Schema::create('Titulos', function (Blueprint $table) {
-            $table->integer('idTitulo')->primary();
+            $table->increments('idTitulo');
             $table->string('titulo',45);
             $table->string('descripcion',100);
             $table->integer('idLey')->unsigned();

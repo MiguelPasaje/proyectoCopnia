@@ -14,11 +14,11 @@ class CreateParagrafosTable extends Migration
     public function up()
     {
         Schema::create('Paragrafos', function (Blueprint $table) {
-            $table->integer("idParagrafo")->primary();
+            $table->increments("idParagrafo");
             $table->text('descripcion');
             $table->integer('idArticulo')->unsigned();
             $table->foreign('idArticulo')
-                ->references('idArticulos')
+                ->references('idArticulo')
                 ->on('Articulos')
                 ->onDelete('cascade');
             $table->timestamps();

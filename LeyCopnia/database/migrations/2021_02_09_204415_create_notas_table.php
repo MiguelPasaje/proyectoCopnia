@@ -14,14 +14,14 @@ class CreateNotasTable extends Migration
     public function up()
     {
         Schema::create('Notas', function (Blueprint $table) {
-            $table->integer('idNota')->primary();
+            $table->increments('idNota');
             $table->text('nota');
-            $table->integer('idItem')->nullable();
+            $table->integer('idItem')->nullable()->unsigned();
             $table->foreign('idItem')
                 ->references('idItem')
                 ->on('Items')
                 ->onDelete('cascade');
-            $table->integer('idArticulo')->nullable();
+            $table->integer('idArticulo')->nullable()->unsigned();
             $table->foreign('idArticulo')
                 ->references('idArticulo')
                 ->on('Articulos')
