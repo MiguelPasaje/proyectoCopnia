@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\capituloController;
 use App\Http\Controllers\tituloController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\leyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,10 +35,13 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
-    Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyEdit');
-    Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
+    //Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyEdit');
+    //Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
     Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
     Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
     Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');
 // ...
 });
+
+Route::post('leyCreate', [leyController::class,'getCreate'] )->name('leyCreate.getCreate');
+Route::get('leyCapCreate', [leyController::class,'getConsultaName'] )->name('leyCreate.getConsultaName');
