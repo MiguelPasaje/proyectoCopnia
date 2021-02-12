@@ -20,7 +20,7 @@
                 &nbsp;&nbsp;&nbsp; Perfil
             </a>
 
-            <a href="#" class=" iconSM d-block p-3 text-light mr-3 lead">
+            <a href="/leyCapCreate" class=" iconSM d-block p-3 text-light mr-3 lead">
                 <i class="lateral fas fa-cog"></i>
                 &nbsp;&nbsp;&nbsp; Configuración
             </a>
