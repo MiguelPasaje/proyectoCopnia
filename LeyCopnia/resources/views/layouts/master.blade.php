@@ -35,7 +35,7 @@
 
     @include('partials.navbar')
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-1">
       @yield('content')
     </div>
 

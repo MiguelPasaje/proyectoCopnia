@@ -30,6 +30,10 @@
     margin-left:30px;
   }
 
+  h3.titulo3{
+    margin-left:30px;
+  }
+
   h4.titulo4{
     margin-left:30px;
   }
@@ -51,49 +55,79 @@
 
 
 @section('content')
-@include('partials.sideMenu')
+{{-- @include('partials.sideMenu') --}}
 
-  <div class="contenedor">
-
-    <h1 class="titulo1">
-      {{ $ley->ley }}
-    </h1> 
+  <div class="row">
     
+    <div class="col-4">
+      {{-- row en la que se muestra el titulo de la ley --}}
+      <div class="row m-3">
+        <h1 class="shadow-lg p-3 mb-5 bg-body rounded ">
+          {{ $ley->ley }}
+        </h1> 
+        <hr><hr>
+      </div>
+      
+      {{-- row para mostrar los titulos y capitulos --}}
+      <div class="row m-3">
+        @foreach ($titulos as $titulo)    
+          {{-- titulos --}}
+          <p>
+            <a data-bs-toggle="collapse" href="{{url('#collapseCapitulos'. $titulo->idTitulo)}}" role="button" aria-expanded="false" aria-controls="collapseCapitulos">
+              <h3 class="ps-md-3 p  x-auto" >
+                {{ $titulo->titulo }}
+              </h3>
+            </a>
+            
+            <h6 class="ps-md-3">
+              {{ $titulo->titDes }}
+            </h6>
+          </p>
+            
+          {{-- capitulos --}}
+          <div class="collapse" id={{'collapseCapitulos'.$titulo->idTitulo}}>    
+            @foreach($consucap as  $con)
+              @if($con->idTitulo === $titulo->idTitulo)
 
-    <hr>
-    
-      @foreach ($titulos as $titulo)    
-
-
-        {{---------titulos desplegadores-------------}}
-            <p>
-              <!-- <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> -->
-              <a data-bs-toggle="collapse" href="{{url('#collapseCapitulos'. $titulo->idTitulo)}}" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <h2 class="titulo2">
-                  {{ $titulo->titulo }}
-                </h2>
-              </a>
-              <h4 class="titulo4">
-                {{ $titulo->titDes }}
-              </h4>
-            </p>
-          
-        {{---------capitulos desplegables------------}}
-          <div class="collapse desc" id={{'collapseCapitulos'.$titulo->idTitulo}}>    
-            @foreach($capitulos as $cap)
-              @if($cap->idTitulo === $titulo->idTitulo)
-                <h4 class="titulo4">{{ $cap->capitulo}}</h4>
-                <p class="parrafo">{{ $cap->capDes}}</p>
+                <a data-bs-toggle="collapse" href="{{url('#collapseArticulos'.$con->idCapitulo)}}" role="button" aria-expanded="false" aria-controls="collapseArticulos">
+                  <h6 class="ps-md-4">{{ $con->capitulo}}</h6>
+                </a>
+                <h6 class="ps-md-4">{{ $con->capDes}}</h6>
+                <hr>
               @endif
             @endforeach
-
           </div>        
-                
+                    
           {{--  --}}
           <hr>
+        @endforeach
+
+      </div>
+  
+    </div>
+
+    {{-- articulos --}}
+    <div class="col-5">
+      <div class="row m-3">
+        
+        @foreach ($articulos as $articulo)
+        <div class="collapse" id={{'collapseArticulos'.$articulo->idCapitulo}}>
+          @foreach ($consuart as $con)
+            @if ($con->idArticulo === $articulo->idArticulo)
+              <p>{{$articulo->articulo}}</p>
+              <hr>
+            @endif
+          @endforeach    
+        </div>
       @endforeach
 
-      
+
+
+      </div>
     </div>
+
+  </div>
+
+  
 
 @stop
