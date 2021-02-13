@@ -7,6 +7,8 @@ use App\Models\Ley;
 use App\Models\Titulo;
 use App\Models\Capitulo;
 use App\Models\Articulo;
+use App\Models\Paragrafo;
+
 
 
 
@@ -24,6 +26,52 @@ class leyController extends Controller
        // return view('indice');
 
     }
+
+    public function capiCreate(Request $request ){
+        //return $request->name;
+        $capitulos = new Capitulo();
+
+        $capitulos->capitulo = $request->name;
+        $capitulos->capDes = $request->descrip;
+        $capitulos->idTitulo = $request->idTitulo;
+        
+        $capitulos->save();
+       // return view('indice');
+
+    }
+
+    public function artiCreate(Request $request ){
+        //return $request->name;
+
+        //return $request->all();
+        $articulos = new Articulo();
+
+        $articulos->articulo = $request->name;
+        $articulos->artDes = $request->descrip;
+        $articulos->idCapitulo  = $request->idCapitulo;
+        
+        $articulos->save();
+       // return view('indice');
+
+    }
+
+    public function paragCreate(Request $request ){
+        //return $request->name;
+
+        //return $request->all();
+        $paragrafos = new Paragrafo();
+
+        //$paragrafos->articulo = $request->name;
+        $paragrafos->parDes = $request->parDes;
+        $paragrafos->idArticulo = $request->idArticulo ;
+        
+        $paragrafos->save();
+       // return view('indice');
+
+    }
+
+
+
 
     public function getConsultaName(){
         $leyes = Ley::all(); 

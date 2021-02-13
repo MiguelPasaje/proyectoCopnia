@@ -42,11 +42,18 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');
 // ...
 });
-
-Route::post('leyCreate', [leyController::class,'getCreate'] )->name('leyCreate.getCreate');
-
+/* campos select  */
 Route::get('leyCapCreate', [leyController::class,'getConsultaName'] )->name('leyCreate.getConsultaName');
+
+
+/* crear */
+Route::post('leyCreate', [leyController::class,'getCreate'] )->name('leyCreate.getCreate');
 Route::post('titleCreate', [leyController::class,'tituloCreate'] )->name('titleCreate.tituloCreate');
+Route::post('capituloCreate', [leyController::class,'capiCreate'] )->name('capituloCreate.capiCreate');
+Route::post('articuloCreate', [leyController::class,'artiCreate'] )->name('articuloCreate.artiCreate');
+Route::post('paragrafoCreate', [leyController::class,'paragCreate'] )->name('paragrafoCreate.paragCreate');
+
+
 
 
 

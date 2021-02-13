@@ -187,20 +187,22 @@
                         {{-- body --}}    
                         <div class="content-cap">
                             <div id="cont-cap-create" class="">
-                                <form action="" >
+                                <form action="{{route('capituloCreate.capiCreate') }}" method="POST">
+
+                                    @csrf
 
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label h3">Nombre Capítulo</label>
-                                    <input type="Text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Capitulo">
+                                    <input type="Text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Capitulo" name="name">
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                    <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                    <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="descrip">
                                     </textarea>                                  
                                 </div>
 
-                                <select class=" form-select " aria-label="Default select example">
+                                <select class=" form-select " aria-label="Default select example" name="idTitulo">
                                     <option class="ada" selected>Seleccione titulo al que pertenece:</option>
 
                                     @foreach ( $titles as $titulo )
@@ -214,7 +216,7 @@
                                 
                                 <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
                                     <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary btn-lg  mt-5">Guardar</button>
+                                    <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                 </div>
                     
                             </form>
@@ -252,25 +254,27 @@
                             {{-- body Artículo--}}    
                             <div class="content-cap">
                                 <div id="cont-cap-create" class="">
-                                    <form action="" >
+                                    <form action="{{route('articuloCreate.artiCreate') }} " method="POST" >
+
+                                        @csrf
                         
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del Artículo:</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">                            
+                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" name="name">                            
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="descrip">
                                             </textarea>                                  
                                         </div>
 
 
-                                        <select class=" form-select " aria-label="Default select example">
+                                        <select class=" form-select " aria-label="Default select example" name="idCapitulo">
                                             <option class="ada" selected>Seleccione Capítulo al que pertenece:</option>
                                             @foreach ( $capitulos as $capitulo )
 
-                                                <option  value=" {{$capitulo->idCapitulos}} "> {{ $capitulo->capitulo}}  </option>
+                                                <option  value=" {{$capitulo->idCapitulo}} "> {{ $capitulo->capitulo}}  </option>
                                                                                 
                                            @endforeach
                                         </select>
@@ -278,7 +282,7 @@
 
                                         <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
                                             <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary btn-lg  mt-5">Guardar</button>
+                                            <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                         </div>
             
                                     </form>
@@ -315,21 +319,20 @@
                             {{-- body Parágrafo--}}    
                             <div class="content-cap">
                                 <div id="cont-cap-create" class="">
-                                    <form action="" >
+                                    <form action="{{route('paragrafoCreate.paragCreate') }}" method="POST" >
                         
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del Parágrafo:</label>
-                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">                            
-                                        </div>
+                                        @csrf
+
+                                       
 
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="parDes">
                                             </textarea>                                  
                                         </div>
 
 
-                                        <select class=" form-select " aria-label="Default select example">
+                                        <select class=" form-select " aria-label="Default select example" name="idArticulo">
                                             <option class="ada" selected>Seleccione Artículo al que pertenece:</option>
                                             
                                             @foreach ( $articulos as $articulos )
@@ -343,7 +346,7 @@
 
                                         <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
                                             <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary btn-lg  mt-5">Guardar</button>
+                                            <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                         </div>
             
                                     </form>
