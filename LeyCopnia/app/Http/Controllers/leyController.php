@@ -23,7 +23,8 @@ class leyController extends Controller
         $ley->leyDes = $request->descrip;
         
         $ley->save();
-       // return view('indice');
+       
+        return back()->withInput()->with('save','ok');
 
     }
 
@@ -36,7 +37,8 @@ class leyController extends Controller
         $capitulos->idTitulo = $request->idTitulo;
         
         $capitulos->save();
-       // return view('indice');
+       
+        return back()->withInput()->with('save','ok');
 
     }
 
@@ -51,7 +53,8 @@ class leyController extends Controller
         $articulos->idCapitulo  = $request->idCapitulo;
         
         $articulos->save();
-       // return view('indice');
+       
+        return back()->withInput()->with('save','ok');
 
     }
 
@@ -66,7 +69,8 @@ class leyController extends Controller
         $paragrafos->idArticulo = $request->idArticulo ;
         
         $paragrafos->save();
-       // return view('indice');
+       
+        return back()->withInput()->with('save','ok');
 
     }
 
@@ -100,7 +104,7 @@ class leyController extends Controller
 
         $titulos->save();        
         
-        //return view('indice'); 
+        return back()->withInput()->with('save','ok');
 
 
     }

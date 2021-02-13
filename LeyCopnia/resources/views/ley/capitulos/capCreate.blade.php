@@ -147,7 +147,7 @@
 
 
                                 <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
-                                    <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
+                                    <button id="saveTitle" type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                 </div>
             
@@ -383,7 +383,19 @@
     
     
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @if(session('save')=='ok')
 
+    <script>
+
+     Swal.fire(
+        'Bien echo!',
+        'Guardado con exito!',
+        'success'
+    )
+     </script>
+
+    @endif
 
 
 
