@@ -26,9 +26,11 @@ class tituloController extends Controller
         $titulos = DB::table('Titulos')->where('idLey',$id)->get();
         $capitulos = DB::table('Capitulos')->get();
         $articulos = DB::table('Articulos')->get();
+        $items = DB::table('Items')->get();
+        $paragrafos = DB::table('Paragrafos')->get();
+        $notas = DB::table('Notas')->get();
         
-        
-        return view('ley.titulos.showTitulos',compact('ley','titulos','capitulos','articulos'));
+        return view('ley.titulos.showTitulos',compact('ley','titulos','capitulos','articulos','items','paragrafos','notas'));
 
     }
 
