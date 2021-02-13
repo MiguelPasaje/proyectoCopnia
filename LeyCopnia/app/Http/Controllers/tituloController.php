@@ -54,4 +54,9 @@ class tituloController extends Controller
         //return view('ley/titulos/EditTitulos',array('id'=>$id));
 
     }
+
+    
+
+
+
 }

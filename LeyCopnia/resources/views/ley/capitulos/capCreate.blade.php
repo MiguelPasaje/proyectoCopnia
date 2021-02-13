@@ -119,25 +119,27 @@
                     {{-- body title--}}    
                     <div class="content-cap">
                         <div id="cont-cap-create" class="">
-                            <form action="" >
+                            <form action=" {{route('titleCreate.tituloCreate') }}" method="POST">
+
+                                @csrf
                         
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label h3">Nombre del Título:</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">                            
+                                    <label for="exampleFormControlTextarea1" class="form-label h3" >Nombre del Título:</label>
+                                    <input type="text" name="titulo" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" >                            
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                    <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                    <label for="exampleFormControlTextarea1" class="form-label h3" >Descripción:</label>
+                                    <textarea type="text-area" name="titDes" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
                                     </textarea>                                  
                                 </div>
 
 
-                                <select class=" form-select " aria-label="Default select example">
-                                    <option class="ada" selected>Seleccione ley a la que pertenece:</option>
+                                <select class=" form-select " aria-label="Default select example" name="idLey">
+                                    <option class="ada"   selected>Seleccione ley a la que pertenece:</option>
                                     @foreach ( $leyes as $ley )
 
-                                        <option value=" {{$ley->idLey}} "> {{ $ley->ley}} </option>
+                                        <option  value=" {{$ley->idLey}} "> {{ $ley->ley}}  </option>
                                                                                 
                                     @endforeach
                                     
@@ -146,7 +148,7 @@
 
                                 <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
                                     <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary btn-lg  mt-5">Guardar</button>
+                                    <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                 </div>
             
                             </form>
@@ -200,9 +202,13 @@
 
                                 <select class=" form-select " aria-label="Default select example">
                                     <option class="ada" selected>Seleccione titulo al que pertenece:</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+
+                                    @foreach ( $titles as $titulo )
+
+                                        <option  value=" {{$titulo->idTitulo}} "> {{ $titulo->titulo}}  </option>
+                                                                                
+                                    @endforeach                                    
+
                                 </select>
 
                                 
@@ -262,9 +268,11 @@
 
                                         <select class=" form-select " aria-label="Default select example">
                                             <option class="ada" selected>Seleccione Capítulo al que pertenece:</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            @foreach ( $capitulos as $capitulo )
+
+                                                <option  value=" {{$capitulo->idCapitulos}} "> {{ $capitulo->capitulo}}  </option>
+                                                                                
+                                           @endforeach
                                         </select>
 
 
@@ -323,9 +331,13 @@
 
                                         <select class=" form-select " aria-label="Default select example">
                                             <option class="ada" selected>Seleccione Artículo al que pertenece:</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            
+                                            @foreach ( $articulos as $articulos )
+
+                                                <option  value=" {{$articulos->idArticulo}} "> {{ $articulos->articulo}}  </option>
+                                                                                
+                                            @endforeach
+
                                         </select>
 
 
