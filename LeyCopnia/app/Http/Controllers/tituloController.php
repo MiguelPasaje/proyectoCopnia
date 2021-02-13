@@ -27,21 +27,8 @@ class tituloController extends Controller
         $capitulos = DB::table('Capitulos')->get();
         $articulos = DB::table('Articulos')->get();
         
-        $consucap = DB::table('Titulos')
-             ->rightJoin('Capitulos','Titulos.idTitulo','=','Capitulos.idTitulo')
-            //  ->rightJoin('Articulos','Capitulos.idCapitulo','=','Articulos.idCapitulo')
-             ->where('idLey',$id)
-             ->distinct()
-             ->get();
-
-        $consuart = DB::table('Titulos')
-            ->rightJoin('Capitulos','Titulos.idTitulo','=','Capitulos.idTitulo')
-            ->rightJoin('Articulos','Capitulos.idCapitulo','=','Articulos.idCapitulo')
-            ->where('idLey',$id)
-            ->distinct()
-            ->get();
         
-        return view('ley.titulos.showTitulos',compact('consucap','consuart','ley','titulos','capitulos','articulos'));
+        return view('ley.titulos.showTitulos',compact('ley','titulos','capitulos','articulos'));
 
     }
 
