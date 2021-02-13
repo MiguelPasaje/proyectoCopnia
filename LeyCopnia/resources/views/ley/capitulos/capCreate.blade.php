@@ -90,10 +90,7 @@
                         </div>
                         {{-- fin body ley--}}
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -156,10 +153,7 @@
                     </div>
                     {{--end body title  --}}
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -224,10 +218,7 @@
                     </div>
                     {{-- fin body  --}}
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -290,10 +281,7 @@
                             </div>
                             {{--end body Articulo  --}}
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -354,10 +342,7 @@
                             </div>
                             {{--end body Parágrafo  --}}
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
