@@ -53,9 +53,19 @@ class tituloController extends Controller
     }
 
     public function getEdit($id) {
-        $res = DB::table('Leyes')->where('idLey',$id)->get();
-       return response(json_encode($res),200)->header('Content-type','text/plain');
+        //$res = DB::table('Leyes')->where('idLey',$id)->get();
+        $ley = Ley::findOrFail($id);
+       //return response(json_encode($res),200)->header('Content-type','text/plain');
+       return view('ley.titulos.editTitulos',compact('ley'));
+    }
 
+    public function putEdit(Request $request,$id){
+        $ley = Ley::find($id);
+        $ley->ley = $request->titulo;
+        $ley->imagen = $request->imagen;
+        $ley->leyDes = $request->des;
+        $ley->save();
+        return redirect('/ley/titulos/'.$id);
     }
 
     

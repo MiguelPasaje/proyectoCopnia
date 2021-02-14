@@ -67,39 +67,12 @@
                     {{ $ley->ley }}
                     <!-- Button trigger editTitle -->
                     @if (Auth::user()->rol === 'Editor')
-                        <a id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
-                            <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#mtitle">
+                        <a  class="buton" id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
                                 Editar Titulo de la Ley
-                            </button>
                         </a>  
                     @endif
                     
                 </h1>
-
-                
-                
-                <!-- Modal Edit Title-->
-                <div class="modal fade" id="mtitle" tabindex="-1" aria-labelledby="mtitleLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="mtitleLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" >
-                            <div class="form">
-                                <div id="formulario">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
                 <hr>
             </div>
         
@@ -234,23 +207,6 @@
     </div>
 
     @section('scripts')
-        <script>
-            $(document).ready(function(){
-                $("#titulo").click(function(e){
-                    e.preventDefault();
-                    $.ajax({
-                        url:this.href,
-                    }).done(function(res){
-                        var titulo = JSON.parse(res);
-                        console.log(titulo);
-                        for(var x=0;x<titulo.length;x++){
-                            var todo = '<input type="text" name="edit" id="edit" value='+capitulos[x].ley+'>';
-                            $('#formulario',window.parent.document).append(todo);
-                        }
-                    });
-                });
-            });
-        </script>
     @endsection
   
 

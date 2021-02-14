@@ -35,9 +35,13 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
-    Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyEdit');
+    Route::put('/leyEdit{id}',[tituloController::class,'putEdit'])->name('putEdit');
+
+    Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyCreate');
+
     Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
     Route::get('/leyCapEdit/{idCap}', [capituloController::class, 'getEdit' ])->name('capEdit');
+    
     Route::post('PostCap', [capituloController::class, 'postCreate' ])->name('PostCapCreate');
     Route::put('PutCap', [capituloController::class, 'putEdit' ])->name('putCapEdit');
 // ...
