@@ -45,7 +45,18 @@
 </style>
 
 @section('content')
-
+<div class="h1">
+  @php
+    if(isset($_COOKIE['contador'])){
+        setCookie('contador', $_COOKIE['contador']+1, time()+365*24*60*60);
+        echo " Tus vistas: " . $_COOKIE['contador'];
+    } else{
+        setcookie('contador',1,time()+365*24*60*60);
+        echo " Bienvenido por primera vez a nuestra página";
+        
+    }
+@endphp
+</div>
 
 <div class="content">
     <div class="row">
