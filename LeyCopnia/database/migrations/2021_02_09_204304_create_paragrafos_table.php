@@ -15,7 +15,7 @@ class CreateParagrafosTable extends Migration
     {
         Schema::create('Paragrafos', function (Blueprint $table) {
             $table->increments("idParagrafo");
-            $table->text('descripcion');
+            $table->text('parDes');
             $table->integer('idArticulo')->unsigned();
             $table->foreign('idArticulo')
                 ->references('idArticulo')

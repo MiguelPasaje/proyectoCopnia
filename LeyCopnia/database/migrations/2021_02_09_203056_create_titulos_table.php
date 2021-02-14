@@ -16,7 +16,7 @@ class CreateTitulosTable extends Migration
         Schema::create('Titulos', function (Blueprint $table) {
             $table->increments('idTitulo');
             $table->string('titulo',45);
-            $table->string('descripcion',100);
+            $table->string('titDes',100);
             $table->integer('idLey')->unsigned();
             $table->foreign('idLey')
                 ->references('idLey')

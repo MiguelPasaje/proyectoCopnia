@@ -45,103 +45,107 @@
 </style>
 
 @section('content')
-
+<div class="h1">
+  @php
+    if(isset($_COOKIE['contador'])){
+        setCookie('contador', $_COOKIE['contador']+1, time()+365*24*60*60);
+        echo " Tus vistas: " . $_COOKIE['contador'];
+    } else{
+        setcookie('contador',1,time()+365*24*60*60);
+        echo " Bienvenido por primera vez a nuestra página";
+        
+    }
+@endphp
+</div>
 
 <div class="content">
     <div class="row">
         <div class=col>
-        <div class="slideshow-container">
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerA.jpg')}}" style="width:100%">
-    
-  </div>
+          <div class="slideshow-container">
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerA.jpg')}}" style="width:100%">
+            </div>
 
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerB.jpg')}}" style="width:100%"> 
-   
-  </div>
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerB.jpg')}}" style="width:100%"> 
+            </div>
 
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerC.jpg')}}" style="width:100%">
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerC.jpg')}}" style="width:100%">
+            </div>
 
-  </div>
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerD.jpg')}}" style="width:100%">
+            </div>
 
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerD.jpg')}}" style="width:100%">
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerE.jpg')}}" style="width:100%">
+            </div>
 
-  </div>
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerF.jpg')}}" style="width:100%">
+            </div>
 
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerE.jpg')}}" style="width:100%">
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerG.jpg')}}" style="width:100%">
+            </div>
 
-  </div>
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerF.jpg')}}" style="width:100%">
+            <div class="mySlides1">
+              <img src="{{asset('img/BannerH.jpg')}}" style="width:100%">
+            </div>
 
-  </div>
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+          </div>
 
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerG.jpg')}}" style="width:100%">
+          <div class="row" >
 
-  </div>
-
-  <div class="mySlides1">
-    <img src="{{asset('img/BannerH.jpg')}}" style="width:100%">
-
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-</div>
-
-    <div class="row" >
-
-        @foreach( $arrayLeyes as $key => $ley)
-    
-            <div class="col-sm-4">
-                <div class="card my-2 border border-success" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-5 my-2">
-                            <a href="{{url('/ley/titulos/'. $ley->idLey)}}">
-                            <img src="{{$ley->imagen}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
-                            </a>
-                            
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$ley->ley}}</h5>
-                                <p class="card-text pb-2">{{$ley->descripcion}}</p>
-                                <a href="{{url('/ley/titulos/'. $ley->idLey)}}" class="btn btn-primary mx-3">Consultar</a>
+              @foreach( $arrayLeyes as $ley)
+          
+                <div class="col-sm-4">
+                    <div class="card my-2 border border-success" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-5 my-2">
+                                <a href="{{url('/ley/titulos/'. $ley->idLey)}}">
+                                <img src="{{$ley->imagen}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
+                                </a>
+                                
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$ley->ley}}</h5>
+                                    <p class="card-text pb-2">{{$ley->leyDes}}</p>
+                                    <a href="{{url('/ley/titulos/'. $ley->idLey)}}" class="btn btn-primary mx-3">Consultar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        @endforeach
+              @endforeach
 
-    </div>
+          </div>
 
-    <script>
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
+<script>
+  var slideIndex = [1,1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
   }
-  x[slideIndex[no]-1].style.display = "block";  
-}
+
+  function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}    
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex[no]-1].style.display = "block";  
+  }
 </script>
 
 @stop

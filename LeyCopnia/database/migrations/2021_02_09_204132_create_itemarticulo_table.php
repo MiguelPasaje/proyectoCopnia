@@ -15,7 +15,7 @@ class CreateItemarticuloTable extends Migration
     {
         Schema::create('Items', function (Blueprint $table) {
             $table->increments('idItem');
-            $table->text('descripcion');
+            $table->text('iteDes');
             $table->integer('idArticulo')->unsigned();
             $table->foreign('idArticulo')
                 ->references('idArticulo')

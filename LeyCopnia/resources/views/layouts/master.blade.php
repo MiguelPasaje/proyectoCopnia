@@ -35,7 +35,7 @@
 
     @include('partials.navbar')
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-1">
       @yield('content')
     </div>
 
@@ -45,9 +45,15 @@
 
     @include('partials.footer')
 
+    {{-- chartisan para graficos --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="{{	url('/assets/bootstrap/js/bootstrap.min.js')	}}"  crossorigin="anonymous"></script>
 
