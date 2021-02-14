@@ -36,8 +36,9 @@
 
     {{-- agregar --}}
 
-    <div class="card">
-        <div class="card-header">
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="card-header" style="cursor:default">
+            <i class="fas fa-plus-square" style="color:black"></i>
         Agregar
         </div>
         <div class="card-body">
@@ -45,6 +46,8 @@
         <!-- button crear ley -->
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-plus-square" style="color:rgb(255, 255, 255)"></i>
+
             Crear Ley
         </button>
         
@@ -78,17 +81,18 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label h3">Url o Link de Imagen:</label>
-                                        <input type="text" name="urlImagen" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">                                    
+                                        <input type="text" name="urlImagen" class="form-control" id="exampleFormControlInput1" placeholder="URL : http">                                    
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                        <textarea type="text-area" name="descrip" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                        <textarea type="text-area" name="descrip" class="form-control" id="exampleFormControlInput1" placeholder="">
                                         </textarea>                                  
                                     </div>
                                     
                                     <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
-                                        <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5">Cancelar</button>
+                                        <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
+
                                         <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                     </div>
                     
@@ -105,6 +109,8 @@
         {{--  --}}
         <!-- button crear title -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crear-ley">
+            <i class="fas fa-plus-square" style="color:rgb(255, 255, 255)"></i>
+
             Crear Título
         </button>
   
@@ -134,7 +140,7 @@
 
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label h3" >Descripción:</label>
-                                        <textarea type="text-area" name="titDes" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción">
+                                        <textarea type="text-area" name="titDes" class="form-control" id="exampleFormControlInput1" placeholder="">
                                         </textarea>                                  
                                     </div>
 
@@ -151,7 +157,7 @@
 
 
                                     <div class=" d-flex align-items-start justify-content-around" style="height: 200px;">
-                                        <button id="saveTitle" type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
+                                        <button type="cancel" class="btn btn-warning btn-lg bt-5 mt-5" data-dismiss="modal">Cancelar</button>
                                         <button type="submit" class="btn btn-primary btn-lg  mt-5">Guardar</button>
                                     </div>
                 
@@ -169,6 +175,8 @@
         <!-- button crear capitulo -->
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalcap">
+            <i class="fas fa-plus-square" style="color:rgb(255, 255, 255)"></i>
+
                 Crear Capítulo
         </button>
         
@@ -199,7 +207,7 @@
                                     
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                        <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="descrip">
+                                        <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="" name="descrip">
                                         </textarea>                                  
                                     </div>
 
@@ -234,6 +242,8 @@
             {{--  --}}
         <!-- button crear Articulo-->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crear-art">
+            <i class="fas fa-plus-square" style="color:rgb(255, 255, 255)"></i>
+
             Crear Artículo
         </button>
   
@@ -263,7 +273,7 @@
 
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="descrip">
+                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="" name="descrip">
                                             </textarea>                                  
                                         </div>
 
@@ -296,6 +306,8 @@
 
             <!-- button crear Articulo-->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crear-parag">
+            <i class="fas fa-plus-square" style="color:rgb(255, 255, 255)"></i>
+
                 Crear Parágrafo
             </button>
 
@@ -322,7 +334,7 @@
 
                                         <div class="mb-3">
                                             <label for="exampleFormControlTextarea1" class="form-label h3">Descripción:</label>
-                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="Desrcipción" name="parDes">
+                                            <textarea type="text-area" class="form-control" id="exampleFormControlInput1" placeholder="" name="parDes">
                                             </textarea>                                  
                                         </div>
 
@@ -376,9 +388,9 @@
     {{-- reportes --}}
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
         <hr>
-        <br><h1>REPORTES DE VISITAS ANUALES A LA PAGINA</h1><br>
+        <br><h1>REPORTES DE VISITAS ANUALES A LA PÁGINA</h1><br>
         
 
         <canvas id="myChart" >
