@@ -53,8 +53,8 @@ class tituloController extends Controller
     }
 
     public function getEdit($id) {
-
-        //return view('ley/titulos/EditTitulos',array('id'=>$id));
+        $res = DB::table('Leyes')->where('idLey',$id)->get();
+       return response(json_encode($res),200)->header('Content-type','text/plain');
 
     }
 
