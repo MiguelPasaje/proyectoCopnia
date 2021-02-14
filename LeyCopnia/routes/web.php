@@ -56,6 +56,14 @@ Route::post('paragrafoCreate', [leyController::class,'paragCreate'] )->name('par
 
 
 
+/* about */
+
+Route::get('/about',[HomeController::class,'about'])->name('about');
+
+
+
+
+
 
 //Route::get('leyCapCreate', [leyController::class,'getConsultaNameTitle'] )->name('titleCreate.getConsultaNameTitle');
 
