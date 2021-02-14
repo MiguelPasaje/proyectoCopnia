@@ -1197,7 +1197,7 @@ class DatabaseSeeder extends Seeder
         array(
             'idnotas' => '603',
             'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. El presente artículo fue declarado EXEQUIBLE por los cargos analizados.', 
-            'iditem' => '208',
+            'iditem' => null,
             'idarticulo' => '27'),
         array(
             'idnotas' => '604',//Esta en ARTICULO 9o(id=>28).no tiene items
@@ -1233,7 +1233,7 @@ class DatabaseSeeder extends Seeder
             'idnotas' => '610',
             'nota' => 'Nota: Sentencia C-570 de 2004, Corte Constitucional. Literal n) declarado INEXEQUIBLE', 
             'iditem' => '222',
-            'idarticulo' => '45'),
+            'idarticulo' => null),
         array(
             'idnotas' => '611',
             'nota' => 'Notas: Mediante la Sentencia C-078 de 2003, la Corte Constitucional revisó las objeciones presidenciales a los artículos25, 26, 27, 28 y 80 delproyecto de Ley No. 44 de 2001 - Senado de la República-,218 de 2002 -Cámara de Representantes–, en cumplimiento de lo dispuesto en el artículo 167 de la Constitución Política. Sentencia C-649 de 2003, Corte Constitucional. Se declaró cumplida la exigencia constitucional del artículo 167 de la Carta Política.', 
