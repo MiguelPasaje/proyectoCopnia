@@ -1,3 +1,6 @@
+
+@if (Auth::user()->rol === 'Editor')
+
 @extends('layouts.master')
 
 @section('title','capituloCREATE')
@@ -444,3 +447,5 @@
     @endif
 
 @stop
+    
+@endif
