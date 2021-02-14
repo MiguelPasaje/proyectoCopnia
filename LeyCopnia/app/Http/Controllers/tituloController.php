@@ -34,8 +34,28 @@ class tituloController extends Controller
 
     }
 
-    public function getArticulos($id){
+    protected function downloadFile($src){
+        if (is_file($src)){
+            $info = finfo_open(FILEINFO_MIME_TYPE);
+            $content_type = finfo_file($info,$src);
+            finfo_close($info);
+            $file_name=basename($src).PHP_EOL;
+            $size = filesize($src);
+            header("Content-type: $content_type");
+            header("Content-Disposition: attachment; filename=$file_name");
+            header("Content-Transfer-Encoding: binary");
+            header("Content-Length:$size");
+            readfile($src);
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    public function download(){
+        if(!$this->downloadFile(asset('files/Ley_842_03.pdf'))){
+            return redirect()->back();
+        }
     }
 
     public function getEdit($id) {

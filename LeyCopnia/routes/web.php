@@ -45,6 +45,7 @@ Route::group(['middleware' => 'auth'], function() {
 /* campos select  */
 Route::get('leyCapCreate', [leyController::class,'getConsultaName'] )->name('leyCreate.getConsultaName');
 
+Route::get('/ley/download',[tituloController::class,'download'])->name('download');
 
 /* crear */
 Route::post('leyCreate', [leyController::class,'getCreate'] )->name('leyCreate.getCreate');

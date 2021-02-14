@@ -59,6 +59,7 @@
 
     <div class="row">
         
+        {{-- Titulos & Capitulos --}}
         <div class="col-4">
             {{-- TITULO DE LA LEY --}}
             <div class="row m-3">
@@ -103,7 +104,7 @@
         </div>
 
         {{-- Articulos --}}
-        <div class="col-5">
+        <div class="col-4">
             <div class="row m-3">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-articulos" role="tabpanel" aria-labelledby="capitulo0">
@@ -191,8 +192,13 @@
             </div>
         </div>
 
+        {{-- pdf para descargar --}}
+
+        <div class="col-4">
+            <a href="{{url('/ley/download')}}">Descargar</a>
+        </div>
     </div>
 
   
 
-@stop
+    @stop
