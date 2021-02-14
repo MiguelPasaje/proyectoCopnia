@@ -20,7 +20,7 @@ class CreateTitulosTable extends Migration
             $table->integer('idLey')->unsigned();
             $table->foreign('idLey')
                 ->references('idLey')
-                ->on('leyes')
+                ->on('Leyes')
                 ->onDelete('cascade');
             $table->timestamps();
         });
