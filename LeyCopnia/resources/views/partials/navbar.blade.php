@@ -128,10 +128,20 @@
                                                             <i class="fas fa-sign-out-alt"></i>
                                                             Cerrar sesión
                                                         </button>
-                                                        
 
                                                     </form>
+                                                    
+                                                    {{-- FORMA 1 --}}
+
+                                                    @if (Auth::user()->rol === 'Editor')
+
+                                                    <a  type="button" href="/leyCapCreate" class="btn btn-link " style="display:inline;cursor:pointer; text-decoration:none;color:white;">
+                                                        <i class="lateral fas fa-cog"></i>
+                                                        Configuración
+                                                    </a>
+                                                    @endif                                                
                                                 </li>
+                                                
                                             </ul>
                                         
                                         </div>

@@ -20,10 +20,19 @@
                 &nbsp;&nbsp;&nbsp; Perfil
             </a>
 
+            {{-- forma2 --}}
+
+            @if (Auth::user()->rol === 'Editor')
+
             <a href="/leyCapCreate" class=" iconSM d-block p-3 text-light mr-3 lead">
                 <i class="lateral fas fa-cog"></i>
                 &nbsp;&nbsp;&nbsp; Configuración
             </a>
+
+                                                    
+            @endif  
+
+                
         </div>
 
     </div>
