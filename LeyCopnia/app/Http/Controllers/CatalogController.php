@@ -8,7 +8,7 @@ use DB;
 class CatalogController extends Controller
 {
     public function getIndex(){
-        $leyes = DB::table('leyes')->get();
+        $leyes = DB::table('Leyes')->get();
         return view('Indice',['arrayLeyes'=>$leyes]);
     }
 }
