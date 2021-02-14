@@ -118,13 +118,14 @@
                                         </a>
         
                     
-                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                                  
+                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color:#26262B">                                  
                     
                                             <ul class="navbar-nav navbar-right">
-                                                <li class="nav-item">
+                                                <li class="nav-item" >
                                                     <form action="{{ url('/logout') }}" method="POST" style="display:inline">
                                                         {{ csrf_field() }}    
                                                         <button type="submit" class="btn btn-link " style="display:inline;cursor:pointer; text-decoration:none;color:white; ">
+                                                            <i class="fas fa-sign-out-alt"></i>
                                                             Cerrar sesión
                                                         </button>
                                                         
