@@ -426,6 +426,8 @@ var chart = new Chart(ctx, {
    
     
     {{--  --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </div>
 
     @if(session('save')=='ok')
