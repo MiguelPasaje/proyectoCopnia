@@ -16,12 +16,6 @@ use DB;
 class tituloController extends Controller
 {
     public function getLey($id) {
-
-        //return view('ley/titulos/showTitulos',array('id'=>$id));
-        //$titulo = Titulo::all();
-        //$capitulos = Capitulo::all();
-        //$titulos = DB::table('Titulos')->where('idLey','100')->get();
-
         $ley = Ley::findOrFail($id);
         $titulos = DB::table('Titulos')->where('idLey',$id)->get();
         $capitulos = DB::table('Capitulos')->get();
