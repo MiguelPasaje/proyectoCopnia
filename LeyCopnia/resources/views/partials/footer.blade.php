@@ -1,4 +1,5 @@
 <footer>
+    
     <div class="container-footer">
         <div class="container-ini">
             <div class="colum1">
@@ -75,6 +76,7 @@
     </div>
     
 </footer>
+<a name="ancla-footer" id="ancla-footer"></a>
 <div class="container-end">
     
         <div class="copyright">

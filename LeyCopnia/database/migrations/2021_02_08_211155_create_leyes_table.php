@@ -29,6 +29,6 @@ class CreateLeyesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leyes');
+        Schema::dropIfExists('Leyes');
     }
 }

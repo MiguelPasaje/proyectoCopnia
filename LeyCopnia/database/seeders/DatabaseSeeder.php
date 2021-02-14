@@ -1399,7 +1399,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedLeyes(){
-        DB::table('leyes')->delete();
+        DB::table('Leyes')->delete();
         foreach( $this->arrayLeyes as $leyes ) {
             $p = new Ley;
             $p->idLey = $leyes['idley'];
@@ -1413,7 +1413,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedTitulos(){
-        DB::table('titulos')->delete();
+        DB::table('Titulos')->delete();
         foreach( $this->titulos as $titulo) {
             $p = new Titulo;
             $p->idTitulo = $titulo['idtitulo'];
@@ -1425,7 +1425,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedCapitulos(){
-        DB::table('capitulos')->delete();
+        DB::table('Capitulos')->delete();
         foreach( $this->capitulos as $capitulo) {
             $p = new Capitulo;
             $p->idCapitulo= $capitulo['idcapitulo'];
@@ -1437,7 +1437,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedArticulos(){
-        DB::table('articulos')->delete();
+        DB::table('Articulos')->delete();
         foreach( $this->articulos as $articulo) {
             $p = new Articulo;
             $p->idArticulo= $articulo['idarticulo'];
@@ -1449,7 +1449,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedItems(){   
-        DB::table('items')->delete();
+        DB::table('Items')->delete();
         foreach( $this->itemArticulo as $item) {
             $p = new Item;
             $p->idItem= $item['iditem'];
@@ -1460,7 +1460,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedParagrafos(){
-        DB::table('paragrafos')->delete();
+        DB::table('Paragrafos')->delete();
         foreach( $this->paragrafos as $paragrafo) {
             $p = new Paragrafo;
             $p->idParagrafo= $paragrafo['idparagrafo'];
@@ -1471,7 +1471,7 @@ class DatabaseSeeder extends Seeder
     }
 
     private function seedNotas(){
-        DB::table('notas')->delete();
+        DB::table('Notas')->delete();
         foreach( $this->notas as $nota) {
             $p = new Nota;
             $p->idNota= $nota['idnotas'];

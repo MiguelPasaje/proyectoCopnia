@@ -76,7 +76,7 @@
                         </a>
                     </li>
                     <li class="nav-item {{-- {{  Request::is('/catalog') ? 'active' : ''}} --}}">
-                        <a class="navhov nav-link" href="{{url('/contacto')}}">
+                        <a class="navhov nav-link" {{-- href="{{url('/contacto')}}" --}} name="ancla-footer" href="#ancla-footer" >
                             <i class="fas fa-envelope"></i> Contacto
                         </a>
                     </li>
