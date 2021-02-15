@@ -65,11 +65,14 @@
             <div class="row m-3">
                 <h1 class="shadow-lg p-3 mb-5 bg-body rounded ">
                     {{ $ley->ley }}
-                    <!-- Button trigger editTitle -->
+
+                    <!-- edit Title -->
                     @if (Auth::user()->rol === 'Editor')
-                        <a  class="buton" id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
+                        <p class="text-warning">
+                            <a  class="text-danger" id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
                                 Editar Titulo de la Ley
-                        </a>  
+                            </a>  
+                        </p>
                     @endif
                     
                 </h1>
@@ -85,6 +88,10 @@
                                 {{ $titulo->titulo }}
                             </h3>
                         </a>
+                        {{-- editar  Titulo--}}
+                        @if (Auth::user()->rol === 'Editor')
+                            <a class="text-danger" href="{{url('tituloEdit/'.$titulo->idTitulo.'/'.$ley->idLey)}}">Editar Titulo</a>
+                        @endif
                     
                     <h6 class="ps-md-3">
                         {{ $titulo->titDes }}
@@ -100,6 +107,10 @@
                                         <h6 class="ps-md-4">{{ $cap->capitulo}}</h6>
                                         <h6 class="ps-md-4">{{ $cap->capDes}}</h6>
                                     </a>
+                                    {{-- editar capitulo --}}
+                                    @if (Auth::user()->rol === 'Editor')
+                                        <a class="text-danger"  href="{{url('capituloEdit/'.$cap->idCapitulo.'/'.$ley->idLey)}}">EDITAR</a>
+                                    @endif
                                 @endif
                             @endforeach
                         </div>

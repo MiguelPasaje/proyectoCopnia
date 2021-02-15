@@ -24,7 +24,7 @@ class tituloController extends Controller
         $paragrafos = DB::table('Paragrafos')->get();
         $notas = DB::table('Notas')->get();
         
-        return view('ley.titulos.showTitulos',compact('ley','titulos','capitulos','articulos','items','paragrafos','notas'));
+        return view('ley.titulos.showLey',compact('ley','titulos','capitulos','articulos','items','paragrafos','notas'));
 
     }
 
@@ -52,13 +52,13 @@ class tituloController extends Controller
         }
     }
 
+    // Funciones editar Ley
     public function getEdit($id) {
         //$res = DB::table('Leyes')->where('idLey',$id)->get();
         $ley = Ley::findOrFail($id);
        //return response(json_encode($res),200)->header('Content-type','text/plain');
-       return view('ley.titulos.editTitulos',compact('ley'));
+       return view('ley.titulos.editLey',compact('ley'));
     }
-
     public function putEdit(Request $request,$id){
         $ley = Ley::find($id);
         $ley->ley = $request->titulo;
@@ -68,8 +68,17 @@ class tituloController extends Controller
         return redirect('/ley/titulos/'.$id);
     }
 
-    
-
-
-
+    //Funciones editar Titulo
+    public function getEditTitulo($id,$idl){
+        $titulo = Titulo::findOrFail($id);
+        return view('ley.titulos.editTitulo',compact('titulo'));
+    }
+    public function putEditTitulo(Request $request,$id,$idl){
+        $titulo = Titulo::findOrFail($id);
+        $titulo -> titulo = $request->titulo;
+        $titulo -> titDes = $request->des;
+        $titulo ->save();
+        return redirect('/ley/titulos/'.$idl);
+        
+    }
 }

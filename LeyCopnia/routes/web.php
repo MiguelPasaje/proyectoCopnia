@@ -34,9 +34,20 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function() {
+    /* URL editar ley */
     Route::get('/leyEdit{id}',[tituloController::class,'getEdit'])->name('leyEdit');
     Route::put('/leyEdit{id}',[tituloController::class,'putEdit'])->name('putEdit');
 
+    /* URL editar titulos */
+    Route::get('/tituloEdit/{id}/{idl}',[tituloController::class,'getEditTitulo'])->name('getEditTitulo');
+    Route::put('/tituloEdit/{id}/{idl}',[tituloController::class,'putEditTitulo'])->name('putEditTitulo');
+
+    /* URL editar capitulos */
+    Route::get('/capituloEdit/{id}/{idl}',[capituloController::class,'getEdit'])->name('getEditTitulo');
+    Route::put('/capituloEdit/{id}/{idl}',[capituloController::class,'putEdit'])->name('putEditTitulo');
+
+
+    
     Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyCreate');
 
     Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');
