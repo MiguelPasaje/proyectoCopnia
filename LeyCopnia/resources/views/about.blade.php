@@ -41,7 +41,7 @@ p{
     <div class="row">
         <div class="col-sm-5 col-md-6">
             <h1 style="padding: 2%;">
-                title1
+                Nuestra Empresa.
             </h1>
     
             <p style="padding: 2%;">
