@@ -57,7 +57,7 @@
 @section('content')
 {{-- @include('partials.sideMenu') --}}
 
-    <div class="row">
+    <div class="row justify-content-md-center">
         
         {{-- Titulos & Capitulos --}}
         <div class="col-4">
@@ -142,6 +142,13 @@
                                                 {{$art->articulo}}
                                             </button>
 
+                                            {{-- editar articulo --}}
+                                            @if (Auth::user()->rol === 'Editor')
+                                                <a class="text-danger"  href="{{url('articuloEdit/'.$art->idArticulo.'/'.$ley->idLey)}}">Editar Articulo</a>
+                                            @endif
+
+
+
                                         <!-- Modal -->
                                         <div class="modal fade" id="{{'exampleModal'.$art->idArticulo}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -212,9 +219,9 @@
 
         {{-- pdf para descargar --}}
 
-        <div class="col-4">
+        {{-- <div class="col-4">
             <a href="{{url('/ley/download')}}">Descargar</a>
-        </div>
+        </div> --}}
     </div>
 
     @section('scripts')
