@@ -6,6 +6,7 @@ use App\Http\Controllers\capituloController;
 use App\Http\Controllers\tituloController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\leyController;
+use App\Http\Controllers\articuloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,11 +44,14 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('/tituloEdit/{id}/{idl}',[tituloController::class,'putEditTitulo'])->name('putEditTitulo');
 
     /* URL editar capitulos */
-    Route::get('/capituloEdit/{id}/{idl}',[capituloController::class,'getEdit'])->name('getEditTitulo');
-    Route::put('/capituloEdit/{id}/{idl}',[capituloController::class,'putEdit'])->name('putEditTitulo');
+    Route::get('/capituloEdit/{id}/{idl}',[capituloController::class,'getEdit'])->name('getEditCapitulo');
+    Route::put('/capituloEdit/{id}/{idl}',[capituloController::class,'putEdit'])->name('putEditCapitulo');
 
 
-    
+    /* URL editar articulo */
+    Route::get('/articuloEdit/{id}/{idl}',[articuloController::class,'getEdit'])->name('getEditArticulo');
+    Route::put('/articuloEdit/{id}/{idl}',[articuloController::class,'putEdit'])->name('putEditArticulo');
+
     Route::get('/leyCreate',[tituloController::class,'getCreate'])->name('leyCreate');
 
     Route::get('/leyCapCreate', [capituloController::class, 'getCreate' ])->name('capCreate');

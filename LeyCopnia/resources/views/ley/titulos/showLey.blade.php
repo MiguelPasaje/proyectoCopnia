@@ -142,6 +142,13 @@
                                                 {{$art->articulo}}
                                             </button>
 
+                                            {{-- editar articulo --}}
+                                            @if (Auth::user()->rol === 'Editor')
+                                                <a class="text-danger"  href="{{url('articuloEdit/'.$art->idArticulo.'/'.$ley->idLey)}}">Editar Articulo</a>
+                                            @endif
+
+
+
                                         <!-- Modal -->
                                         <div class="modal fade" id="{{'exampleModal'.$art->idArticulo}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
