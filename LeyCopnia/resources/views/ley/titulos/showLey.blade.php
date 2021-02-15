@@ -57,7 +57,7 @@
 @section('content')
 {{-- @include('partials.sideMenu') --}}
 
-    <div class="row">
+    <div class="row justify-content-md-center">
         
         {{-- Titulos & Capitulos --}}
         <div class="col-4">
@@ -219,9 +219,9 @@
 
         {{-- pdf para descargar --}}
 
-        <div class="col-4">
+        {{-- <div class="col-4">
             <a href="{{url('/ley/download')}}">Descargar</a>
-        </div>
+        </div> --}}
     </div>
 
     @section('scripts')
