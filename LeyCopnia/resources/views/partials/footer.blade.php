@@ -1,4 +1,35 @@
+<style>
+    .ir-arriba{
+        display:none;
+        background-repeat:no-repeat;
+        font-size:20px;
+        color:black !important;
+        cursor:pointer !important;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        z-index:2;
+    }
+    .ico-arrib{
+        color:black !important;
+        cursor: pointer;
+    }
+
+    .ir-arriba:hover{
+        background-color:rgba(63, 63, 97, 0.473) !important;
+        cursor:pointer !important;
+    }
+
+
+</style>
+
 <footer>
+    <a class="ir-arriba"  javascript:void(0) title="Volver arriba">
+        <span class="fa-stack">
+          <i class="ico-circ fa fa-circle fa-stack-2x"></i>
+          <i class="ico-arrib fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     
     <div class="container-footer">
         <div class="container-ini">
@@ -95,3 +126,21 @@
          </div>
     
 </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){ //Hacia arriba
+            irArriba();
+        });
+
+    function irArriba(){
+        $('.ir-arriba').click(function(){ $('body,html').animate({ scrollTop:'0px' },1000); });
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 0){ $('.ir-arriba').slideDown(600); }else{ $('.ir-arriba').slideUp(600); }
+        });
+        $('.ir-abajo').click(function(){ $('body,html').animate({ scrollTop:'1000px' },1000); });
+        }
+  </script>
