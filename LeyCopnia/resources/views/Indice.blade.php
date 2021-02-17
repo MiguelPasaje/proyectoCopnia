@@ -107,7 +107,7 @@
                           <div class="row g-0">
                               <div class="col-md-5 my-2">
                                   <a href="{{url('/ley/titulos/'. $ley->idLey)}}">
-                                  <img src="{{$ley->imagen}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
+                                    <img src="{{asset('imagenes/leyes/'.$ley->imagen)}}" class="m-4 img-thumbnail border border-warning"  style="height:300px"  alt="libro">
                                   </a>
                                   
                               </div>
