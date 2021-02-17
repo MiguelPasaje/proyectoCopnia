@@ -60,19 +60,6 @@ class tituloController extends Controller
        return view('ley.titulos.editLey',compact('ley'));
     }
     public function putEdit(Request $request,$id){
-        // $imagen = $request->file('imagen');
-       
-        // $imagen->move(public_path('assets'),$imagen->getClientOriginalName());
-
-        // $ley = Ley::find($id);
-        // $ley->ley = $request->titulo;
-        // $ley->imagen = $request->file('imagen')->store('public');
-        // $ley->leyDes = $request->des;
-        // $ley->save();
-        // return redirect('/ley/titulos/'.$id);
-        //return $request;
-        // dd($request->file('imagen'));
-
         if($request->hasFile('imagen')){
             $file = $request->file('imagen');
             $name = time().$file->getClientOriginalName();
@@ -86,7 +73,15 @@ class tituloController extends Controller
 
             return redirect('/ley/titulos/'.$id);
 
-            //return $name;
+            
+        }else{
+            $ley = Ley::find($id);
+            $ley->ley = $request->titulo;
+            //$ley->imagen = $name;
+            $ley->leyDes = $request->des;
+            $ley->save();
+
+            return redirect('/ley/titulos/'.$id);
         }
 
     }
