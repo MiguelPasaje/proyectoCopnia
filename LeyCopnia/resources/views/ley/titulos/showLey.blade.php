@@ -70,7 +70,7 @@
                     @if (Auth::user()->rol === 'Editor')
                         <p class="text-warning">
                             <a  class="text-danger" id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
-                                Editar Titulo de la Ley
+                                Editar Ley
                             </a>  
                         </p>
                     @endif
