@@ -50,6 +50,10 @@
   
   }
 
+  .ico-edit:hover{
+      cursor: pointer;
+  }
+
 </style>
 
 
@@ -70,6 +74,7 @@
                     @if (Auth::user()->rol === 'Editor')
                         <p class="text-warning">
                             <a  class="text-danger" id="titulo" name="titulo" href="{{url('/leyEdit'.$ley->idLey)}}">
+                                <i class="ico-edit fas fa-edit" style="color: red;"></i>
                                 Editar Ley
                             </a>  
                         </p>
@@ -90,7 +95,11 @@
                         </a>
                         {{-- editar  Titulo--}}
                         @if (Auth::user()->rol === 'Editor')
-                            <a class="text-danger" href="{{url('tituloEdit/'.$titulo->idTitulo.'/'.$ley->idLey)}}">Editar Titulo</a>
+                            <a class="text-danger" href="{{url('tituloEdit/'.$titulo->idTitulo.'/'.$ley->idLey)}}">
+                                <i class="ico-edit fas fa-edit" style="color: red;"></i>
+
+                                Editar Titulo
+                            </a>
                         @endif
                     
                     <h6 class="ps-md-3">
@@ -109,7 +118,11 @@
                                     </a>
                                     {{-- editar capitulo --}}
                                     @if (Auth::user()->rol === 'Editor')
-                                        <a class="text-danger"  href="{{url('capituloEdit/'.$cap->idCapitulo.'/'.$ley->idLey)}}">EDITAR</a>
+                                        <a class="text-danger"  href="{{url('capituloEdit/'.$cap->idCapitulo.'/'.$ley->idLey)}}">
+                                            <i class="ico-edit fas fa-edit" style="color: red;"></i>
+
+                                            EDITAR
+                                        </a>
                                     @endif
                                 @endif
                             @endforeach
@@ -144,7 +157,10 @@
 
                                             {{-- editar articulo --}}
                                             @if (Auth::user()->rol === 'Editor')
-                                                <a class="text-danger"  href="{{url('articuloEdit/'.$art->idArticulo.'/'.$ley->idLey)}}">Editar Articulo</a>
+                                                <a class="text-danger"  href="{{url('articuloEdit/'.$art->idArticulo.'/'.$ley->idLey)}}">
+                                                    <i class="ico-edit fas fa-edit" style="color: red;"></i>                                                    
+                                                    Editar Articulo
+                                                </a>
                                             @endif
 
 
