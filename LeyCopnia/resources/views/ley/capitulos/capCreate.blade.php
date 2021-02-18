@@ -70,7 +70,7 @@
                             {{-- body ley--}}    
                             <div class="content-cap">
                                 <div id="cont-cap-create" class="">
-                                    <form action="{{route('leyCreate.getCreate')}}" method="POST" >
+                                    <form action="{{route('leyCreate.getCreate')}}" method="POST" enctype="multipart/form-data">
 
                                         {{-- token --}}
 
