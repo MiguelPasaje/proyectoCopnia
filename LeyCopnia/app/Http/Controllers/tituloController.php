@@ -23,7 +23,7 @@ class tituloController extends Controller
         $items = DB::table('Items')->get();
         $paragrafos = DB::table('Paragrafos')->get();
         $notas = DB::table('Notas')->get();
-        
+
         return view('ley.titulos.showLey',compact('ley','titulos','capitulos','articulos','items','paragrafos','notas'));
 
     }
@@ -66,14 +66,20 @@ class tituloController extends Controller
             $file->move(public_path().'/imagenes/leyes/', $name);
 
             $ley = Ley::find($id);
+
+            $oldfile = public_path().'/imagenes/leyes/'.$ley->imagen;
+            unlink($oldfile);
+
             $ley->ley = $request->titulo;
             $ley->imagen = $name;
             $ley->leyDes = $request->des;
+
             $ley->save();
+
 
             return redirect('/ley/titulos/'.$id);
 
-            
+
         }else{
             $ley = Ley::find($id);
             $ley->ley = $request->titulo;
@@ -97,6 +103,6 @@ class tituloController extends Controller
         $titulo -> titDes = $request->des;
         $titulo ->save();
         return redirect('/ley/titulos/'.$idl);
-        
+
     }
 }
