@@ -15,17 +15,18 @@ use App\Models\Paragrafo;
 class leyController extends Controller
 {
     public function getCreate(Request $request ){
-        //return $request->name;
+
+        $file = $request->file('imagen');
+        $name = time().$file->getClientOriginalName();
+        $file->move(public_path().'/imagenes/leyes/', $name);
+
         $ley = new Ley();
-
         $ley->ley = $request->name;
-        $ley->imagen = $request->urlImagen;
+        $ley->imagen = $name;
         $ley->leyDes = $request->descrip;
-        
         $ley->save();
-       
-        return back()->withInput()->with('save','ok');
 
+        return back()->withInput()->with('save','ok');
     }
 
     public function capiCreate(Request $request ){

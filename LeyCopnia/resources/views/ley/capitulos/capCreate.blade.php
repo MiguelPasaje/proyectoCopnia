@@ -83,8 +83,10 @@
                                             <input type="Text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Ley">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label h3">Url o Link de Imagen:</label>
-                                            <input type="text" name="urlImagen" class="form-control" id="exampleFormControlInput1" placeholder="URL : http">                                    
+                                            {{-- <label for="exampleFormControlTextarea1" class="form-label h3">Url o Link de Imagen:</label>
+                                            <input type="text" name="urlImagen" class="form-control" id="exampleFormControlInput1" placeholder="URL : http">                                     --}}
+                                            <label for="formFile" class="form-label">Añadir Imagen</label>
+                                            <input type="file" name="imagen">
                                         </div>
 
                                         <div class="mb-3">
